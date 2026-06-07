@@ -6,8 +6,11 @@ Lemonade UI is for frontend work that should feel alive without becoming noisy: 
 
 ## What It Helps Codex Do
 
+- Create a mandatory design contract before open-ended frontend coding.
 - Design from a real product moment instead of a generic template.
 - Apply Lemonade visual DNA: cinematic contrast, shaped frames, layered product objects, and a memorable visual idea.
+- Use concrete composition recipes instead of vague "modern premium" adjectives.
+- Calibrate from screenshots and moodboards by extracting structure, crop, contrast, object treatment, and mobile lessons.
 - Escape the default SaaS hero stack before coding.
 - Choose product artifacts, workflows, selected objects, or operational surfaces instead of decorative app previews.
 - Create a design spine before coding: product evidence, layout, type, material, content rhythm, and interaction budget.
@@ -37,6 +40,19 @@ Invoke it explicitly:
 Use $lemonade-ui to design and build a modern animated landing page for my SaaS product.
 ```
 
+For best results, expect Codex to create a short design contract before coding:
+
+```text
+Design contract:
+Moment: ...
+Artifact: ...
+Composition: ...
+DNA move: ...
+Mobile proof: ...
+Copy budget: ...
+Avoiding: ...
+```
+
 Or ask for work that naturally matches the skill:
 
 ```text
@@ -58,6 +74,7 @@ lemonade-ui/
   SKILL.md
   agents/openai.yaml
   scripts/audit_lemonade_design.py
+  references/design-contract.md
   references/anti-ai-slop.md
   references/calibration-operational-ui.md
   references/calibration-overcopy-and-scale.md
@@ -73,12 +90,18 @@ lemonade-ui/
   references/responsive-composition.md
   references/review-checklist.md
   references/saas-hero-escape-system.md
+  references/visual-reference-calibration.md
   references/visual-hierarchy.md
+  references/recipes/artifact-collage.md
+  references/recipes/dark-product-theatre.md
+  references/recipes/editorial-product-story.md
+  references/recipes/operational-work-surface.md
+  references/recipes/shaped-poster-frame.md
 ```
 
 ## Skill Design
 
-The main `SKILL.md` is a router so it can load quickly. Detailed guidance is split into small one-purpose references:
+The main `SKILL.md` is a fast router with a hard design-contract gate. Detailed guidance is split into small one-purpose references:
 
 - `anti-ai-slop.md` catches generic AI/template aesthetics.
 - `calibration-overcopy-and-scale.md` fixes huge type, yapping, and weak copy rhythm.
@@ -86,6 +109,7 @@ The main `SKILL.md` is a router so it can load quickly. Detailed guidance is spl
 - `calibration-responsive-composition.md` prevents desktop-to-mobile stacking mistakes.
 - `calibration-operational-ui.md` keeps dashboards and tools dense, useful, and calm.
 - `copy-compression.md` keeps pages from over-yapping.
+- `design-contract.md` forces product moment, artifact, composition, DNA move, mobile proof, copy budget, and avoided default before coding.
 - `design-language.md` covers taste, layout, page archetypes, palette, and mistakes to avoid.
 - `design-spine.md` forces the core design decisions before motion.
 - `lemonade-visual-dna.md` captures the positive Lemonade look: cinematic stages, shaped frames, layered objects, strong material, and deliberate type.
@@ -95,7 +119,9 @@ The main `SKILL.md` is a router so it can load quickly. Detailed guidance is spl
 - `responsive-composition.md` handles mobile/desktop composition strategy.
 - `review-checklist.md` is the final quality gate before shipping frontend work.
 - `saas-hero-escape-system.md` breaks the generic SaaS hero pattern.
+- `visual-reference-calibration.md` turns screenshots and moodboards into reusable visual decisions without copying a single product.
 - `visual-hierarchy.md` covers type, spacing, material, and first-read clarity.
+- `references/recipes/` contains executable composition recipes: dark product theatre, shaped poster frame, artifact collage, editorial product story, and operational work surface.
 - `scripts/audit_lemonade_design.py` is a lightweight smoke test for common design and interaction traps.
 
 ## Audit A Local Frontend

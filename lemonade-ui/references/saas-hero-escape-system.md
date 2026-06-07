@@ -2,6 +2,8 @@
 
 Use this for SaaS, startup, product, AI tool, CRM, devtool, and landing-page hero work. The goal is to escape the default AI SaaS hero before writing code.
 
+Start by filling `design-contract.md`. The contract must name the product moment, dominant artifact, composition move, mobile proof, copy budget, and default pattern being avoided.
+
 ## Reject The Default Stack
 
 Do not start from this stack unless the user explicitly asks for it and the product evidence justifies it:
@@ -32,6 +34,14 @@ Pick at least one before coding:
 - **Table/detail workspace:** rows plus selected detail and attached actions.
 - **Canvas/editor:** input surface, controls, preview, and export.
 - **Control surface:** a real configurator, scrubber, command palette, or stateful tool.
+
+Then choose the closest recipe:
+
+- Dark/high-contrast hero -> `recipes/dark-product-theatre.md`.
+- Big shaped field or carved frame -> `recipes/shaped-poster-frame.md`.
+- Several proof fragments -> `recipes/artifact-collage.md`.
+- Dense list/detail product proof -> `recipes/operational-work-surface.md`.
+- Multi-section story -> `recipes/editorial-product-story.md`.
 
 ## Vague Prompt Rule
 
@@ -65,6 +75,8 @@ Metrics are proof only when attached to visible product state.
 Mobile must reveal product proof early. No mobile first viewport should be only brand, badge, giant headline, paragraph, and stacked CTAs.
 
 If the artifact cannot fit, show a focused crop, selected record, output card, or active task instead of shrinking the whole desktop preview.
+
+Before final delivery, compare a mobile screenshot against the contract. If the promised mobile proof is not visible early, revise the layout.
 
 ## Visual DNA Check
 

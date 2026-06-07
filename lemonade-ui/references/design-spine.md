@@ -2,6 +2,8 @@
 
 Use this before building a new page, section, component family, or redesign. The goal is to prevent Codex from jumping straight to animation while the actual design stays weak.
 
+Start with `design-contract.md` for open-ended visual work, then use this file to expand the contract into implementation decisions.
+
 ## The Six Decisions
 
 Make these decisions before writing UI code:
@@ -78,6 +80,16 @@ Pick one lane and commit:
 - **Shaped brand poster:** Oversized rounded/cutout container, capsule nav, framed product object, bold accent field.
 
 Avoid mixing more than two lanes on one page.
+
+## Recipe Bridge
+
+If the lane still feels abstract, choose a recipe:
+
+- Cinematic product stage -> `recipes/dark-product-theatre.md`.
+- Shaped brand poster -> `recipes/shaped-poster-frame.md`.
+- Editorial product -> `recipes/editorial-product-story.md`.
+- Utility premium or dashboard/admin -> `recipes/operational-work-surface.md`.
+- Product fragments or proof collage -> `recipes/artifact-collage.md`.
 
 ## Interaction Is Not The Idea
 

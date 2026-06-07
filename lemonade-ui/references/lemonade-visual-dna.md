@@ -2,6 +2,8 @@
 
 Use this when the user asks for Lemonade vibe, when a design feels merely competent, or when the page has good product logic but no memorable visual character.
 
+For open-ended work, use this after `design-contract.md`. The contract should name the single Lemonade DNA move before implementation starts.
+
 ## Core Feeling
 
 Lemonade UI should feel like a premium product poster with real software inside it:
@@ -26,7 +28,9 @@ Prefer one of these structures over default split hero:
 - **Editorial sequence:** sections feel like composed scenes, not repeated feature blocks.
 - **Artifact wall:** several product fragments form a controlled collage around a clear narrative.
 
-If the composition is left-copy/right-preview, add a stronger twist: crop, scale shift, cutout frame, floating object, side annotation, theatrical lighting, or asymmetry.
+If the composition is left-copy/right-side preview, add a stronger twist: crop, scale shift, cutout frame, floating object, side annotation, theatrical lighting, or asymmetry.
+
+When the structure still feels vague, choose one of the recipe files under `references/recipes/` and follow its layout, mobile, and failure-mode rules.
 
 ## Surface And Material
 
@@ -68,7 +72,7 @@ When no brand is provided:
 Reject or revise when the design has:
 
 - Pale grid background plus safe split hero.
-- Generic app window floating beside generic copy.
+- Generic software window floating beside generic copy.
 - Placeholder logo, generic category label, and default nav.
 - Three loose stats pretending to be proof.
 - Uniform card grid with no scene, depth, or hero object.

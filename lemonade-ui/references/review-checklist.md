@@ -4,6 +4,8 @@ Use this before finishing a Lemonade UI-style frontend task.
 
 ## Product Clarity
 
+- The implementation matches the design contract.
+- The chosen default pattern was actually avoided.
 - The first viewport says what the product, place, object, or workflow is.
 - The main action is visible and clearly clickable.
 - The page uses specific content instead of generic placeholder marketing.
@@ -15,7 +17,9 @@ Use this before finishing a Lemonade UI-style frontend task.
 
 ## Design Spine
 
+- Product moment, artifact, composition, DNA move, mobile proof, copy budget, and avoided default are all clear.
 - A clear art-direction lane was chosen.
+- A concrete recipe was used when visual direction was open.
 - Product evidence, layout, typography, material, content rhythm, and interaction budget are all accounted for.
 - The static screenshot works before animation.
 - The design has a memorable visual idea beyond hover or scroll effects.
@@ -61,5 +65,5 @@ Use this before finishing a Lemonade UI-style frontend task.
 - Reduced-motion behavior is present.
 - Relevant checks pass or failures are clearly explained.
 - Browser inspection was performed for frontend changes when possible.
-- Desktop and mobile screenshots or observations were used to catch visual bugs.
+- Desktop and mobile screenshots or observations were compared against the design contract.
 - `scripts/audit_lemonade_design.py <path>` was run when available and local files exist.

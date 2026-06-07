@@ -92,6 +92,47 @@ GENERIC_SPLIT_HERO_PATTERNS = [
     r"\b" + phrase("left-", "content") + r"\b",
 ]
 
+DEFAULT_HERO_ARTIFACT_PATTERNS = [
+    r"\b" + phrase("mock", "up") + r"\b",
+    r"\b" + phrase("pre", "view") + r"\b",
+    r"\b" + phrase("dash", "board") + r"\b",
+    r"\b" + phrase("app", "-window") + r"\b",
+    r"\b" + phrase("browser", "-frame") + r"\b",
+    r"\b" + phrase("product", "-mock") + r"\b",
+]
+
+PRODUCT_PROOF_PATTERNS = [
+    r"\b" + phrase("selected", "-record") + r"\b",
+    r"\b" + phrase("selected", "-object") + r"\b",
+    r"\b" + phrase("detail", "-pane") + r"\b",
+    r"\b" + phrase("timeline") + r"\b",
+    r"\b" + phrase("editor") + r"\b",
+    r"\b" + phrase("canvas") + r"\b",
+    r"\b" + phrase("transcript") + r"\b",
+    r"\b" + phrase("queue") + r"\b",
+    r"\b" + phrase("record") + r"\b",
+    r"\b" + phrase("artifact") + r"\b",
+]
+
+CTA_LABEL_PATTERNS = [
+    r"\b" + phrase("book ", "demo") + r"\b",
+    r"\b" + phrase("start ", "free") + r"\b",
+    r"\b" + phrase("get ", "started") + r"\b",
+    r"\b" + phrase("learn ", "more") + r"\b",
+    r"\b" + phrase("watch ", "tour") + r"\b",
+]
+
+LARGE_TYPE_PATTERN = re.compile(
+    r"\btext-(?:6xl|7xl|8xl|9xl)\b|text-\[[^\]]*(?:4rem|5rem|6rem|7rem|8rem|9rem)[^\]]*\]",
+    re.I,
+)
+
+HERO_PATTERN = re.compile(r"\b(hero|landing|masthead)\b", re.I)
+TWO_COLUMN_PATTERN = re.compile(r"\b(?:grid-cols-2|md:grid-cols-2|lg:grid-cols-2|xl:grid-cols-2|split)\b", re.I)
+ARTIFACT_PATTERN = re.compile("|".join(DEFAULT_HERO_ARTIFACT_PATTERNS), re.I)
+PROOF_PATTERN = re.compile("|".join(PRODUCT_PROOF_PATTERNS), re.I)
+CTA_PATTERN = re.compile("|".join(CTA_LABEL_PATTERNS), re.I)
+
 
 RULES = [
     Rule(
@@ -211,6 +252,57 @@ RULES = [
 ]
 
 
+def file_level_findings(path: Path, text: str) -> list[tuple[str, str, Path, int, str]]:
+    findings: list[tuple[str, str, Path, int, str]] = []
+
+    has_hero = bool(HERO_PATTERN.search(text))
+    has_h1 = bool(re.search(r"<h1\b", text, re.I))
+    has_paragraph = bool(re.search(r"<p\b", text, re.I))
+    has_two_ctas = len(CTA_PATTERN.findall(text)) >= 2 or len(re.findall(r"<(?:button|a)\b", text, re.I)) >= 2
+    has_default_artifact = bool(ARTIFACT_PATTERN.search(text))
+    has_two_column = bool(TWO_COLUMN_PATTERN.search(text))
+    has_large_type = bool(LARGE_TYPE_PATTERN.search(text))
+    has_specific_proof = bool(PROOF_PATTERN.search(text))
+
+    if has_hero and has_h1 and has_paragraph and has_two_ctas and has_default_artifact:
+        offset = re.search(r"<h1\b", text, re.I)
+        findings.append(
+            (
+                "warn",
+                "AI008",
+                path,
+                line_number(text, offset.start()) if offset else 1,
+                "Possible default SaaS hero stack: headline, paragraph, multiple CTAs, and generic software preview.",
+            )
+        )
+
+    if has_hero and has_two_column and has_default_artifact:
+        offset = TWO_COLUMN_PATTERN.search(text)
+        findings.append(
+            (
+                "warn",
+                "AI009",
+                path,
+                line_number(text, offset.start()) if offset else 1,
+                "Two-column hero plus preview needs a visible composition twist and early product proof.",
+            )
+        )
+
+    if has_hero and has_large_type and has_default_artifact and not has_specific_proof:
+        offset = LARGE_TYPE_PATTERN.search(text)
+        findings.append(
+            (
+                "warn",
+                "AI010",
+                path,
+                line_number(text, offset.start()) if offset else 1,
+                "Large hero type appears to outrank product proof; verify artifact visibility, especially on mobile.",
+            )
+        )
+
+    return findings
+
+
 def iter_files(root: Path):
     if root.is_file():
         if root.suffix in TEXT_EXTENSIONS:
@@ -241,6 +333,8 @@ def audit(root: Path) -> int:
         for rule in RULES:
             for match in rule.pattern.finditer(text):
                 findings.append((rule.severity, rule.code, path, line_number(text, match.start()), rule.message))
+
+        findings.extend(file_level_findings(path, text))
 
     for severity, code, path, line, message in findings:
         print(f"{severity.upper()} {code} {path}:{line} {message}")

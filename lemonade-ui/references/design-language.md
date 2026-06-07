@@ -4,8 +4,10 @@ Use this as the short taste index. For detailed work, load the focused reference
 
 ## Lemonade Standard
 
+- Design contract before frontend code.
 - Specific product evidence before decoration.
 - Product artifact before software-preview wallpaper.
+- Composition recipe before safe default layout.
 - Default SaaS hero escape before polish.
 - Lemonade visual DNA before safe template composition.
 - Strong static composition before animation.
@@ -16,22 +18,26 @@ Use this as the short taste index. For detailed work, load the focused reference
 
 ## Layer Order
 
-1. Product moment and artifact choice.
-2. Layout and rhythm.
-3. Copy, typography, and content.
-4. Palette and material.
-5. Component states and controls.
-6. Interaction and motion.
-7. Browser QA.
+1. Design contract.
+2. Product moment and artifact choice.
+3. Composition recipe, layout, and rhythm.
+4. Copy, typography, and content.
+5. Palette and material.
+6. Component states and controls.
+7. Interaction and motion.
+8. Browser screenshot QA.
 
 If a later layer is doing the work of an earlier layer, go back. Animation cannot fix weak product evidence. Color cannot fix vague copy. Shadows cannot fix bad hierarchy.
 
 ## Reference Map
 
+- Need pre-code commitment: `design-contract.md`.
 - Need direction: `design-spine.md`.
 - Needs Lemonade vibe: `lemonade-visual-dna.md`.
+- Have screenshots or moodboard: `visual-reference-calibration.md`.
 - SaaS hero feels default: `saas-hero-escape-system.md`.
 - Need product artifact: `product-artifact-selection.md`.
+- Need concrete layout shape: choose one file under `recipes/`.
 - Too much text: `copy-compression.md`.
 - Weak layout/type: `visual-hierarchy.md`.
 - Bad mobile/desktop: `responsive-composition.md`.
