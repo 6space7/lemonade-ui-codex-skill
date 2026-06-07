@@ -59,6 +59,39 @@ VERTICAL_SPECIFIC_PATTERNS = [
     r"\b" + phrase("opened ", "profile") + r"\b",
 ]
 
+SAAS_HERO_WALLPAPER_PATTERNS = [
+    r"\b" + phrase("mock ", "dashboard") + r"\b",
+    r"\b" + phrase("dashboard ", "preview") + r"\b",
+    r"\b" + phrase("analytics ", "dashboard") + r"\b",
+    r"\b" + phrase("framed ", "app ", "preview") + r"\b",
+    r"\b" + phrase("app ", "window") + r"\b",
+    r"\b" + phrase("browser ", "chrome") + r"\b",
+]
+
+PLACEHOLDER_BRAND_PATTERNS = [
+    r"\b" + phrase("your ", "logo") + r"\b",
+    r"\b" + phrase("company ", "name") + r"\b",
+    r"\b" + phrase("placeholder ", "brand") + r"\b",
+    r"\b" + phrase("logo ", "here") + r"\b",
+    r">\s*[A-Z]\s*</(?:span|div|button|a)>",
+]
+
+GENERIC_METRIC_PATTERNS = [
+    r"\b" + phrase("demos ", "booked") + r"\b",
+    r"\b" + phrase("tasks ", "scheduled") + r"\b",
+    r"\b" + phrase("first-", "reply ", "average") + r"\b",
+    r"\b" + phrase("time ", "saved") + r"\b",
+    r"\b" + phrase("faster ", "workflow") + r"\b",
+]
+
+GENERIC_SPLIT_HERO_PATTERNS = [
+    r"\b" + phrase("hero-", "copy") + r"\b",
+    r"\b" + phrase("hero-", "mockup") + r"\b",
+    r"\b" + phrase("split-", "hero") + r"\b",
+    r"\b" + phrase("right-", "preview") + r"\b",
+    r"\b" + phrase("left-", "content") + r"\b",
+]
+
 
 RULES = [
     Rule(
@@ -90,6 +123,30 @@ RULES = [
         "warn",
         re.compile(r"\b(Analytics|Insights|Automation|Growth)\b"),
         "Generic dashboard labels are fine only when surrounded by domain-specific data.",
+    ),
+    Rule(
+        "AI004",
+        "warn",
+        re.compile("|".join(SAAS_HERO_WALLPAPER_PATTERNS), re.I),
+        "Decorative software previews need real task flow, selected state, or object-level proof.",
+    ),
+    Rule(
+        "AI005",
+        "warn",
+        re.compile("|".join(PLACEHOLDER_BRAND_PATTERNS), re.I),
+        "Placeholder identity weakens the design; create a small deliberate brand treatment.",
+    ),
+    Rule(
+        "AI006",
+        "warn",
+        re.compile("|".join(GENERIC_METRIC_PATTERNS), re.I),
+        "Metrics should connect to visible product state, not float as generic proof.",
+    ),
+    Rule(
+        "AI007",
+        "warn",
+        re.compile("|".join(GENERIC_SPLIT_HERO_PATTERNS), re.I),
+        "Default two-column hero structure needs a stronger composition move or earlier product proof.",
     ),
     Rule(
         "CNT001",

@@ -5,6 +5,8 @@ Use this as the short taste index. For detailed work, load the focused reference
 ## Lemonade Standard
 
 - Specific product evidence before decoration.
+- Product artifact before software-preview wallpaper.
+- Default SaaS hero escape before polish.
 - Strong static composition before animation.
 - Sharp copy before big typography.
 - Credible controls before fancy surfaces.
@@ -13,7 +15,7 @@ Use this as the short taste index. For detailed work, load the focused reference
 
 ## Layer Order
 
-1. Product evidence.
+1. Product moment and artifact choice.
 2. Layout and rhythm.
 3. Copy, typography, and content.
 4. Palette and material.
@@ -26,6 +28,8 @@ If a later layer is doing the work of an earlier layer, go back. Animation canno
 ## Reference Map
 
 - Need direction: `design-spine.md`.
+- SaaS hero feels default: `saas-hero-escape-system.md`.
+- Need product artifact: `product-artifact-selection.md`.
 - Too much text: `copy-compression.md`.
 - Weak layout/type: `visual-hierarchy.md`.
 - Bad mobile/desktop: `responsive-composition.md`.

@@ -7,6 +7,7 @@ Use this for dashboards, admin panels, internal tools, consoles, CRMs, schedulin
 - The UI looks like a landing page wearing dashboard labels.
 - Oversized cards waste space that operators need for comparison.
 - Charts and metrics appear without filters, rows, actions, or detail states.
+- A dashboard is used as hero decoration instead of a repeat-use work surface.
 - Decorative motion, shadows, and rounded panels reduce scannability.
 
 ## Better Direction
@@ -15,6 +16,7 @@ Use this for dashboards, admin panels, internal tools, consoles, CRMs, schedulin
 - Use tables, lists, filters, tabs, detail panes, status chips, logs, and clear action buttons.
 - Keep typography compact and calm.
 - Make the primary repeated task obvious within the first viewport.
+- If using a dashboard, include filters, rows/events, selected detail, actions, and at least one concrete state.
 
 ## Implementation Cues
 

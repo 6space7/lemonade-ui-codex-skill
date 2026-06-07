@@ -11,9 +11,11 @@ Good product evidence can be:
 - Real app screenshots.
 - Believable mock UI with concrete labels and states.
 - Tables with domain-specific rows.
-- Timelines, editors, inboxes, checkout forms, galleries, dashboards, calendars, device frames, command palettes, location views, or file objects.
+- Timelines, editors, inboxes, checkout forms, galleries, calendars, device frames, command palettes, location views, operational tables, or file objects.
 - Real photos or generated bitmap imagery that reveal the thing being sold.
 - Proof: metrics, quotes, review counts, export states, logs, before/after, or customer artifacts.
+
+Dashboards are product evidence only when the product is dashboard-first and the view has filters, rows, selected detail, actions, and real states. A chart/card summary is not enough.
 
 ## Credibility Details
 
@@ -49,11 +51,16 @@ These are acceptable only when surrounded by specific data.
 - **Editor/result:** input canvas, settings, generated output, export.
 - **Inbox/action:** incoming items, triage, suggested action, approval.
 - **Commerce/configure:** product media, variants, price, shipping, purchase action.
-- **Ops dashboard:** filters, table, status, detail pane, repeated task controls.
+- **Operational surface:** filters, table/list, status, detail pane, repeated task controls.
+- **Dashboard:** use only when the product's main job is monitoring or analysis, and include real rows/events/actions.
 
 ## Logo-Hide Test
 
 Hide the logo. If the page still feels like any random SaaS, add stronger product evidence.
+
+## Label-Swap Test
+
+Change the artifact labels to generic SaaS words. If the artifact still works, add a selected object, domain data, attached action, or concrete outcome.
 
 ## Copy Transfer
 

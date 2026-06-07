@@ -7,6 +7,7 @@ Use this when the design feels polished but vague, like a good-looking shell aro
 - The main visual is decorative or abstract.
 - Product copy says "automate", "analyze", "manage", or "grow" without showing the work.
 - Mockups use generic labels that could fit any SaaS.
+- Dashboard previews use cards, charts, and summary numbers without selected objects or actions.
 - The page depends on brand name, gradient, or animation to feel specific.
 
 ## Better Direction
@@ -15,6 +16,7 @@ Use this when the design feels polished but vague, like a good-looking shell aro
 - Replace vague cards with inspectable product evidence: rows, files, previews, selected states, timelines, forms, media, quotes, logs, or metrics.
 - Use domain nouns from the user's product, not invented sample-company names.
 - Design a real surface first, then make it beautiful.
+- Use a dashboard only when monitoring or analysis is the actual product job.
 
 ## Implementation Cues
 

@@ -7,6 +7,8 @@ Lemonade UI is for frontend work that should feel alive without becoming noisy: 
 ## What It Helps Codex Do
 
 - Design from a real product moment instead of a generic template.
+- Escape the default SaaS hero stack before coding.
+- Choose product artifacts, workflows, selected objects, or operational surfaces instead of decorative app previews.
 - Create a design spine before coding: product evidence, layout, type, material, content rhythm, and interaction budget.
 - Build first viewports that clearly show the product, object, workflow, or place.
 - Build a memorable visual idea that can come from composition, product UI, media, typography, material, or interaction.
@@ -64,9 +66,11 @@ lemonade-ui/
   references/design-spine.md
   references/design-language.md
   references/motion-recipes.md
+  references/product-artifact-selection.md
   references/product-evidence.md
   references/responsive-composition.md
   references/review-checklist.md
+  references/saas-hero-escape-system.md
   references/visual-hierarchy.md
 ```
 
@@ -83,9 +87,11 @@ The main `SKILL.md` is a router so it can load quickly. Detailed guidance is spl
 - `design-language.md` covers taste, layout, page archetypes, palette, and mistakes to avoid.
 - `design-spine.md` forces the core design decisions before motion.
 - `motion-recipes.md` covers GSAP/CSS/React interaction patterns and reduced-motion safety.
+- `product-artifact-selection.md` chooses the right visible artifact before product proof is designed.
 - `product-evidence.md` helps turn vague claims into visible product proof.
 - `responsive-composition.md` handles mobile/desktop composition strategy.
 - `review-checklist.md` is the final quality gate before shipping frontend work.
+- `saas-hero-escape-system.md` breaks the generic SaaS hero pattern.
 - `visual-hierarchy.md` covers type, spacing, material, and first-read clarity.
 - `scripts/audit_lemonade_design.py` is a lightweight smoke test for common design and interaction traps.
 

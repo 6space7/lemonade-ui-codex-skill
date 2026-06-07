@@ -10,6 +10,8 @@ Use this before finishing a Lemonade UI-style frontend task.
 - The visual hook belongs to the domain.
 - Hiding the logo would not make the page feel like any random AI SaaS template.
 - The product artifact has credible labels, data, states, and controls.
+- Landing heroes escape the default SaaS stack or clearly justify it.
+- Metrics are connected to visible product state.
 
 ## Design Spine
 
@@ -21,6 +23,7 @@ Use this before finishing a Lemonade UI-style frontend task.
 ## Layout
 
 - Desktop and mobile have intentional composition.
+- Mobile reveals product proof early, not only after headline, paragraph, and stacked CTAs.
 - Text does not overlap, clip, or escape controls.
 - Fixed-format UI elements have stable dimensions.
 - There are no nested cards.

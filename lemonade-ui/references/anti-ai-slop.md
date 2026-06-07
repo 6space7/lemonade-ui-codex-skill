@@ -8,6 +8,11 @@ Use this when a design feels generic, glossy, over-explained, blob-heavy, or lik
 - Purple/blue mesh gradient as the main design idea.
 - Three cards with icons and short blurbs as the main section.
 - Fake dashboard with vague labels.
+- Generic split hero: left copy, right framed preview, loose stats, soft grid/gradient.
+- Framed app preview used as wallpaper instead of a real artifact.
+- Placeholder brand: single initial mark plus generic product category.
+- Metrics row with numbers that do not connect to visible product state.
+- Background treatment acting as the whole art direction.
 - Huge rounded containers nested inside huge rounded containers.
 - Dark glass panels with no product specificity.
 - Decorative SVG waves/orbs/blobs replacing real media or product UI.
@@ -16,6 +21,7 @@ Use this when a design feels generic, glossy, over-explained, blob-heavy, or lik
 ## Replace With
 
 - A real product artifact.
+- A selected object, task, output, transcript, table/detail state, or before/after.
 - A sharper content promise.
 - A domain-specific layout lane.
 - A clear before/after workflow.

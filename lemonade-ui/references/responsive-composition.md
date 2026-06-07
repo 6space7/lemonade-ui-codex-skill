@@ -35,6 +35,7 @@ For tools/dashboards:
 - Keep tap targets at least 44px where possible.
 - Avoid horizontal scroll unless it is an intentional carousel/table behavior.
 - Make stats proof, not another dense text block.
+- Product proof should appear in the first mobile viewport for landing heroes, as a crop, selected object, output, or active task.
 
 ## Desktop Rules
 
@@ -59,6 +60,7 @@ Look for:
 - Buttons escaping containers.
 - Header crowding.
 - Product artifact too far below the fold.
+- First mobile viewport containing only brand, badge, headline, copy, and CTAs.
 - Huge empty gaps.
 - Repeated stacked cards.
 - Hover-only content that touch users cannot access.
@@ -68,6 +70,7 @@ Look for:
 - Replace long headline with shorter mobile copy.
 - Move proof stats above a large mockup.
 - Crop the mockup to the most informative area.
+- Replace a full framed preview with one selected object or active task on mobile.
 - Turn a multi-column product UI into a stepper, tabs, or focused preview.
 - Remove secondary nav links from mobile header.
 - Make the desktop hero less boxed-in and the mobile hero less tall.

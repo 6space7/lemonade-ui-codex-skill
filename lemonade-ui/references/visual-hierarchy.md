@@ -17,10 +17,13 @@ The user should understand, in order:
 
 Do not let headline, CTA, stats, mockup, nav, and badges all compete at the same intensity.
 
+Product proof beats hero text. If a headline, paragraph, CTA pair, or stats row delays the first useful artifact, reduce the text and move proof earlier.
+
 ## Type Rules
 
 - Use giant type only when the surrounding layout has room to breathe.
 - On mobile, reduce headline ambition before compressing everything else.
+- On mobile, product proof must appear early enough to shape the first viewport.
 - Keep hero-scale type out of panels, dashboards, cards, and controls.
 - Avoid viewport-width font sizing.
 - Avoid negative letter spacing.

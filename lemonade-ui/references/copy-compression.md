@@ -16,6 +16,8 @@ The product surface should carry the workflow. Copy should name the promise, act
 - Cards: one idea, no marketing filler.
 - Mockup labels: short, specific, and useful.
 
+If mobile starts with brand, badge, giant headline, paragraph, and two large CTAs before proof, cut copy and move the artifact up.
+
 ## Replace Yapping
 
 Bad:
@@ -50,6 +52,7 @@ Remove or rewrite:
 - Can a label become a state, count, file name, status, or action?
 - Can a paragraph become a row inside the product mockup?
 - Can a generic CTA become the real next action?
+- Are metrics tied to visible product state instead of floating as proof theater?
 - Does mobile show fewer words than desktop?
 
 ## Before/After Patterns
