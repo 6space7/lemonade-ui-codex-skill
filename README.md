@@ -55,20 +55,30 @@ lemonade-ui/
   SKILL.md
   agents/openai.yaml
   scripts/audit_lemonade_design.py
+  references/anti-ai-slop.md
+  references/copy-compression.md
   references/design-spine.md
   references/design-language.md
   references/motion-recipes.md
+  references/product-evidence.md
+  references/responsive-composition.md
   references/review-checklist.md
+  references/visual-hierarchy.md
 ```
 
 ## Skill Design
 
-The main `SKILL.md` stays short so it can load quickly. Detailed guidance is split into references:
+The main `SKILL.md` is a router so it can load quickly. Detailed guidance is split into small one-purpose references:
 
+- `anti-ai-slop.md` catches generic AI/template aesthetics.
+- `copy-compression.md` keeps pages from over-yapping.
 - `design-language.md` covers taste, layout, page archetypes, palette, and mistakes to avoid.
 - `design-spine.md` forces the core design decisions before motion.
 - `motion-recipes.md` covers GSAP/CSS/React interaction patterns and reduced-motion safety.
+- `product-evidence.md` helps turn vague claims into visible product proof.
+- `responsive-composition.md` handles mobile/desktop composition strategy.
 - `review-checklist.md` is the final quality gate before shipping frontend work.
+- `visual-hierarchy.md` covers type, spacing, material, and first-read clarity.
 - `scripts/audit_lemonade_design.py` is a lightweight smoke test for common design and interaction traps.
 
 ## Audit A Local Frontend

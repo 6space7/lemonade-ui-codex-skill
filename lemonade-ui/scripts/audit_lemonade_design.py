@@ -72,10 +72,22 @@ RULES = [
         "Generic CTA/navigation copy is acceptable only when the surrounding product story is specific.",
     ),
     Rule(
+        "CNT003",
+        "warn",
+        re.compile(r"<p[^>]*>[^<]{180,}</p>", re.I | re.S),
+        "Long paragraph detected; compress copy or move proof into the UI.",
+    ),
+    Rule(
         "CMP001",
         "warn",
         re.compile(r"\bgrid-cols-3\b|\bmd:grid-cols-3\b|\blg:grid-cols-3\b"),
         "Three-column grids are common AI defaults; verify the section rhythm is not generic card soup.",
+    ),
+    Rule(
+        "TYP001",
+        "warn",
+        re.compile(r"\btext-(?:7xl|8xl|9xl)\b|text-\[[^\]]*(?:5rem|6rem|7rem|8rem|9rem)[^\]]*\]", re.I),
+        "Huge type detected; verify it is not overpowering product evidence, especially on mobile.",
     ),
     Rule(
         "LAY001",

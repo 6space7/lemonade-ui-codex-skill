@@ -1,110 +1,82 @@
 ---
 name: lemonade-ui
-description: Lemonade UI design skill for creating modern, animated, tactile websites and frontend components that avoid generic AI-looking design and buggy frontend output. Use when the user asks for Lemonade UI style, animated shadcn-style components, premium landing pages, startup/SaaS/product sites, dashboards, interactive web app surfaces, or when a frontend looks AI-ish, generic, broken, buggy, visually sloppy, poorly responsive, over-animated, or not polished enough.
+description: Lemonade UI design skill for creating modern, animated, tactile websites and frontend components that avoid generic AI-looking design, excessive copy, weak hierarchy, bad responsive composition, and buggy frontend output. Use when the user asks for Lemonade UI style, animated shadcn-style components, premium landing pages, startup/SaaS/product sites, dashboards, interactive web app surfaces, or when a frontend looks AI-ish, text-heavy, generic, broken, buggy, visually sloppy, poorly responsive, over-animated, or not polished enough.
 ---
 
 # Lemonade UI
 
 ## Purpose
 
-Use this skill to design and build web experiences with Lemonade UI energy: useful product surfaces, strong composition, sharp content, tactile structure, and a polished modern feel. Interaction is a finishing layer, not the design itself. Treat generic AI-looking design and buggy responsive behavior as defects, not taste differences.
+Build web experiences with useful product surfaces, strong composition, sharp copy, real product evidence, tactile structure, and restrained motion. Interaction is a finishing layer, not the design itself.
 
-Load references only as needed:
+## Reference Router
 
-- `references/design-spine.md` before starting new pages, landing sections, redesigns, or any broad visual direction.
-- `references/design-language.md` for visual taste, composition, page archetypes, and common mistakes.
-- `references/motion-recipes.md` for GSAP/CSS/React motion patterns and reduced-motion handling.
-- `references/review-checklist.md` before final delivery or when polishing an existing page.
+Load only the files needed for the current problem:
 
-If files exist locally, run `scripts/audit_lemonade_design.py <path>` before final delivery and fix high-signal issues. The script is only a smoke test; visual browser review is still required.
+- `references/design-spine.md`: start here for new pages, broad redesigns, or unclear visual direction.
+- `references/copy-compression.md`: use when the UI feels text-heavy, salesy, explainy, or full of big headline/paragraph blocks.
+- `references/visual-hierarchy.md`: use for typography, spacing, layout, color/material, and first-viewport composition.
+- `references/responsive-composition.md`: use for mobile/desktop strategy, stacked layouts, clipped content, and breakpoint polish.
+- `references/product-evidence.md`: use when the design lacks credible product UI, real media, proof, or domain-specific detail.
+- `references/anti-ai-slop.md`: use when the design feels generic, AI-ish, card-heavy, blob-heavy, or template-like.
+- `references/motion-recipes.md`: use only after the static design works and motion has a clear job.
+- `references/review-checklist.md`: use before final delivery.
+
+If files exist locally, run `scripts/audit_lemonade_design.py <path>` before final delivery and fix high-signal issues. The script is a smoke test; browser review is still required.
 
 ## Working Loop
 
-1. Inspect before touching design.
+1. Inspect first.
    - Read local instructions, framework docs required by the repo, existing components, CSS, assets, and dependencies.
-   - Use the stack already present. Add animation or UI libraries only when they match the project.
-   - Find existing brand, assets, screenshots, components, and layout conventions. Do not invent a new visual system before checking what is already there.
+   - Find existing brand, assets, screenshots, components, and layout conventions before inventing anything.
 
-2. Define the product moment.
-   - Identify the audience, the thing being sold or used, the first action, and the screen's job.
-   - Pick one concrete visual anchor: product UI, dashboard, editor, checkout flow, file object, event gallery, portfolio media, map, timeline, device, board, dock, keyboard, or other real interface object.
-   - If the visual anchor could belong to any startup, it is too generic. Replace it with domain-specific content or UI.
+2. Create the design spine.
+   - Decide product evidence, layout lane, type relationship, material system, content rhythm, and interaction budget.
+   - The static screenshot must already work before animation.
 
-3. Create the design spine before coding.
-   - Choose a layout lane, typography relationship, palette/material system, content hierarchy, product evidence, and section rhythm.
-   - Decide what the page would look like as a static screenshot. It must already feel good without hover, scroll, or animation.
-   - Write concrete UI/content labels. Avoid placeholder startup language.
+3. Compress the message.
+   - If the UI can show it, do not explain it in a paragraph.
+   - Replace generic marketing copy with product nouns, verbs, states, counts, and outcomes.
 
-4. Design the first viewport to prove the idea.
-   - Show the brand/product/place/object immediately.
-   - Put the primary action in reach.
-   - Leave a hint of the next section visible on landing pages.
-   - For apps, tools, dashboards, and games, make the actual usable interface the first screen.
+4. Build visual hierarchy.
+   - Make the first read obvious.
+   - Use type, spacing, alignment, contrast, and material before motion.
+   - Keep hero-scale type out of compact cards, dashboards, and controls.
 
-5. Build the boring correctness first.
-   - Establish responsive grid, stable dimensions, readable type, real content, focus states, and no-overlap constraints before adding motion.
-   - Avoid layout that only works at the current viewport. Check mobile assumptions while building.
-   - Make controls functionally obvious before styling them.
+5. Prove the product.
+   - Use credible UI, real screenshots/media, generated bitmap scenes, product artifacts, workflow states, or proof.
+   - If hiding the logo makes the page feel like any random SaaS, redesign the visual anchor.
 
-6. Add tactile structure.
-   - Use stable dimensions for controls, tiles, boards, previews, counters, and cards.
-   - Use icons for icon-worthy actions, segmented controls for modes, toggles for booleans, menus for option sets, sliders/inputs for numbers, and tabs for views.
-   - Keep cards for repeated items, framed tools, and modals. Avoid nested cards and decorative section cards.
-   - Use real assets, screenshots, generated bitmap imagery, or product UI where inspection matters.
+6. Design responsive composition.
+   - Mobile is a rewritten story, not desktop stacked vertically.
+   - Desktop should use space intentionally, not just bigger cards.
+   - Fix clipping, overlap, horizontal scroll, tap targets, and text fit while building.
 
-7. Spend the interaction budget carefully.
-   - Add motion only after the static layout is strong.
-   - Choose at most one signature behavior per section: magnetic CTA, hover-open object, elastic divider, drag-to-complete, dock magnification, marquee pause, card stack spread, preview switcher, or state transition.
-   - Make motion communicate feedback, hierarchy, or continuity.
-   - Respect reduced motion. Keep the static layout beautiful.
+7. Spend motion carefully.
+   - Add at most one signature interaction per section.
+   - Motion must reveal, confirm, select, complete, navigate, or clarify state.
+   - Respect reduced motion and keep the static layout beautiful.
 
-8. Kill the AI-ish parts.
-   - Remove vague glowing blobs, mesh-gradient hero filler, fake dashboards with generic cards, repeated three-card grids, empty "AI-powered" claims, and over-rounded nested surfaces.
-   - Replace abstract decoration with product evidence: real UI, specific data, credible states, useful controls, media, proof, or workflow.
-   - If hiding the logo makes the page feel like any other AI SaaS template, redesign the visual anchor.
-
-9. Prove it in browser.
-   - Check mobile and desktop. Fix overlap, clipping, awkward wrapping, contrast issues, blank media, layout shift, and cramped controls.
-   - Keep letter spacing at `0` unless an existing design system says otherwise.
-   - Avoid visible text explaining how the UI works. Make the UI understandable.
-   - Do not call the design finished from code inspection alone when a dev server or static preview can run.
-
-## Lemonade Bar
-
-A Lemonade UI result should feel:
-
-- **Specific:** It belongs to the product category, not a generic SaaS template.
-- **Useful:** The component or page could live in a real workflow.
-- **Composed:** Layout, type, spacing, media, and content form one intentional scene.
-- **Legible:** Hierarchy and controls are obvious before animation begins.
-- **Tactile:** Hover, press, drag, focus, and selected states have physical presence.
-- **Alive:** Motion is crisp, restrained, and tied to meaning.
-- **Accessible:** Semantic markup, focus states, labels, contrast, and reduced-motion behavior are present.
-- **Finished:** It survives build checks and visual inspection at real viewport sizes.
+8. Prove it in browser.
+   - Check desktop and mobile.
+   - Run relevant checks and the Lemonade audit script.
+   - Do not call frontend design complete from code inspection alone when a preview can run.
 
 ## Hard Fails
 
-Do not ship while any of these are true:
+Do not ship while any are true:
 
-- The hero is mostly text over a gradient, blob, orb, or vague abstract background.
-- The main product artifact is a fake dashboard made of generic "Analytics", "Growth", "Automation", or "Insights" cards.
 - The design only becomes interesting when animated.
-- The page has no clear typographic hierarchy, content rhythm, or art-direction lane.
-- Mobile has clipped buttons, overlapping text, horizontal scroll, or unreadable controls.
-- Motion is present but no reduced-motion path exists.
-- Icon-only buttons lack accessible names.
-- Hover states change layout size or move surrounding content.
-- The page looks acceptable only in one viewport.
-- The design relies on visible instructions instead of clear controls.
-
-## Strong Defaults
-
-- Prefer `lucide-react` icons in React projects when available.
-- Prefer GSAP for pointer-reactive or timeline-heavy motion when the project already uses it; otherwise use the local motion stack or CSS transitions.
-- Prefer a few saturated accents against neutral surfaces over one-note purple, blue-slate, beige, brown/orange, or dark-gradient themes.
-- Prefer product mockups, real media, or generated bitmap images over SVG-only hero decoration.
-- Prefer direct implementation over long planning when the user asks to build or improve a design.
+- The page is mostly huge text and explanatory paragraphs.
+- The hero is text over a blob, orb, mesh gradient, or vague abstract background.
+- The main product artifact is a fake dashboard with generic Analytics/Growth/Automation/Insights cards.
+- Mobile is just a cramped stacked desktop layout.
+- Type hierarchy, content rhythm, or art direction is unclear.
+- Hover states move surrounding layout.
+- Motion exists without reduced-motion behavior.
+- Icon-only controls lack accessible names.
+- The page looks acceptable in only one viewport.
 
 ## Delivery Standard
 
-Ship working files, not design commentary. Before final response, run relevant checks, run the Lemonade audit script when files are local, and visually inspect the page or component when possible. Report what changed, what passed, what was visually verified, and any blocker that prevented full verification.
+Ship working files, not design commentary. Report what changed, what checks passed, what was visually verified, and any blocker that prevented full verification.
