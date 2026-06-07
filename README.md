@@ -1,0 +1,80 @@
+# Lemonade UI Codex Skill
+
+A Codex skill for designing and building modern, animated, tactile websites and frontend components with Lemonade UI taste.
+
+Lemonade UI is for frontend work that should feel alive without becoming noisy: polished landing pages, product surfaces, animated shadcn-style components, SaaS sites, dashboards, portfolios, and premium UI redesigns.
+
+## What It Helps Codex Do
+
+- Design from a real product moment instead of a generic template.
+- Build first viewports that clearly show the product, object, workflow, or place.
+- Add one memorable interaction per section, such as magnetic CTAs, hover-open objects, elastic dividers, drag completion, dock magnification, or marquee pause.
+- Keep motion accessible with reduced-motion behavior.
+- Avoid common AI design traps like nested cards, decorative blobs, vague gradients, and components that only work with short demo copy.
+- Verify responsive layout, text fit, contrast, interaction states, and build quality before calling work complete.
+
+## Install
+
+Copy the skill folder into your Codex skills directory:
+
+```bash
+mkdir -p ~/.codex/skills
+cp -R lemonade-ui ~/.codex/skills/lemonade-ui
+```
+
+Restart Codex or reload skills if your environment requires it.
+
+## Use
+
+Invoke it explicitly:
+
+```text
+Use $lemonade-ui to design and build a modern animated landing page for my SaaS product.
+```
+
+Or ask for work that naturally matches the skill:
+
+```text
+Make this website feel more premium and animated, like a Lemonade UI component.
+```
+
+```text
+Build a tactile shadcn-style pricing section with one polished interaction.
+```
+
+```text
+Redesign this dashboard so it feels modern but still useful for operators.
+```
+
+## Repo Layout
+
+```text
+lemonade-ui/
+  SKILL.md
+  agents/openai.yaml
+  references/design-language.md
+  references/motion-recipes.md
+  references/review-checklist.md
+```
+
+## Skill Design
+
+The main `SKILL.md` stays short so it can load quickly. Detailed guidance is split into references:
+
+- `design-language.md` covers taste, layout, page archetypes, palette, and mistakes to avoid.
+- `motion-recipes.md` covers GSAP/CSS/React interaction patterns and reduced-motion safety.
+- `review-checklist.md` is the final quality gate before shipping frontend work.
+
+## Suggested GitHub Description
+
+```text
+Codex skill for Lemonade UI-style modern, animated, tactile website and frontend design.
+```
+
+## Validate
+
+From a machine with the Codex skill creator validator available:
+
+```bash
+python3 ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py lemonade-ui
+```

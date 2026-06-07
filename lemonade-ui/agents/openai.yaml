@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lemonade UI"
+  short_description: "Modern animated frontend design skill"
+  default_prompt: "Use $lemonade-ui to design and build a modern animated landing page."
