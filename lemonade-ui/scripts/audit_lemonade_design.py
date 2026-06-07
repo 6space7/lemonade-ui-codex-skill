@@ -60,6 +60,24 @@ RULES = [
         "Generic dashboard labels are fine only when surrounded by domain-specific data.",
     ),
     Rule(
+        "CNT001",
+        "warn",
+        re.compile(r"\b(seamless|powerful|supercharge|boost productivity|unlock|revolutionize)\b", re.I),
+        "Generic marketing words need concrete product behavior or proof.",
+    ),
+    Rule(
+        "CNT002",
+        "warn",
+        re.compile(r"\b(Get Started|Learn More|Features|Solutions)\b"),
+        "Generic CTA/navigation copy is acceptable only when the surrounding product story is specific.",
+    ),
+    Rule(
+        "CMP001",
+        "warn",
+        re.compile(r"\bgrid-cols-3\b|\bmd:grid-cols-3\b|\blg:grid-cols-3\b"),
+        "Three-column grids are common AI defaults; verify the section rhythm is not generic card soup.",
+    ),
+    Rule(
         "LAY001",
         "error",
         re.compile(r"tracking-\[?-|letter-spacing\s*:\s*-", re.I),

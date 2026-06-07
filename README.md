@@ -7,8 +7,9 @@ Lemonade UI is for frontend work that should feel alive without becoming noisy: 
 ## What It Helps Codex Do
 
 - Design from a real product moment instead of a generic template.
+- Create a design spine before coding: product evidence, layout, type, material, content rhythm, and interaction budget.
 - Build first viewports that clearly show the product, object, workflow, or place.
-- Add one memorable interaction per section, such as magnetic CTAs, hover-open objects, elastic dividers, drag completion, dock magnification, or marquee pause.
+- Build a memorable visual idea that can come from composition, product UI, media, typography, material, or interaction.
 - Keep motion accessible with reduced-motion behavior.
 - Avoid common AI design traps like nested cards, decorative blobs, vague gradients, and components that only work with short demo copy.
 - Verify responsive layout, text fit, contrast, interaction states, and build quality before calling work complete.
@@ -54,6 +55,7 @@ lemonade-ui/
   SKILL.md
   agents/openai.yaml
   scripts/audit_lemonade_design.py
+  references/design-spine.md
   references/design-language.md
   references/motion-recipes.md
   references/review-checklist.md
@@ -64,6 +66,7 @@ lemonade-ui/
 The main `SKILL.md` stays short so it can load quickly. Detailed guidance is split into references:
 
 - `design-language.md` covers taste, layout, page archetypes, palette, and mistakes to avoid.
+- `design-spine.md` forces the core design decisions before motion.
 - `motion-recipes.md` covers GSAP/CSS/React interaction patterns and reduced-motion safety.
 - `review-checklist.md` is the final quality gate before shipping frontend work.
 - `scripts/audit_lemonade_design.py` is a lightweight smoke test for common design and interaction traps.

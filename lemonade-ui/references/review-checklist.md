@@ -11,6 +11,13 @@ Use this before finishing a Lemonade UI-style frontend task.
 - Hiding the logo would not make the page feel like any random AI SaaS template.
 - The product artifact has credible labels, data, states, and controls.
 
+## Design Spine
+
+- A clear art-direction lane was chosen.
+- Product evidence, layout, typography, material, content rhythm, and interaction budget are all accounted for.
+- The static screenshot works before animation.
+- The design has a memorable visual idea beyond hover or scroll effects.
+
 ## Layout
 
 - Desktop and mobile have intentional composition.
@@ -25,6 +32,7 @@ Use this before finishing a Lemonade UI-style frontend task.
 ## Interaction
 
 - The signature motion supports feedback, hierarchy, or continuity.
+- Interaction is not carrying the whole design.
 - Hover, focus, active, disabled, and loading states are accounted for where relevant.
 - Icon-only controls have accessible labels.
 - Pointer-only interactions have keyboard/click alternatives when they perform actions.

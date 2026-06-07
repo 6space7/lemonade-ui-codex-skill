@@ -6,9 +6,23 @@ Use this reference when choosing the visual direction for a Lemonade UI-style pa
 
 - Start from a real product moment: booking, paying, organizing, browsing, selecting, editing, shipping, comparing, uploading, monitoring, or presenting.
 - Give the interface a tangible object: folder, card stack, dock, slider, board, keyboard, phone pill, control bar, floating note, payment card, gallery strip, or product mockup.
-- Use a restrained structure with one expressive hook. If everything is loud, nothing feels premium.
+- Use a restrained structure with one expressive hook. The hook can be composition, media, typography, product evidence, material, or motion. It does not have to be an interaction.
 - Make text, media, controls, and motion feel composed as one scene.
 - Build controls users recognize. Style them richly, but do not make common actions mysterious.
+
+## Design Layers
+
+Solve these in order:
+
+1. Product evidence.
+2. Layout and rhythm.
+3. Typography and content.
+4. Palette and material.
+5. Component states and controls.
+6. Interaction and motion.
+7. Browser QA.
+
+If a later layer is doing the work of an earlier layer, go back. Animation cannot fix weak product evidence. Color cannot fix vague content. Shadows cannot fix bad hierarchy.
 
 ## Anti-AI Standard
 
@@ -29,7 +43,7 @@ Replace with:
 - A believable product surface with real labels, rows, tabs, filters, records, charts, controls, or states.
 - A domain-specific object or media moment.
 - A specific workflow: before/after, queue/detail, picker/preview, edit/export, schedule/confirm, browse/compare, plan/pay.
-- One memorable interaction tied to that workflow.
+- A memorable visual idea tied to that workflow. It may be layout, type, material, image, product UI, or interaction.
 
 ## Composition Patterns
 
@@ -94,6 +108,18 @@ Avoid dark blurred atmosphere when users need to understand the venue.
 - Use stable min-height, aspect-ratio, or grid tracks for repeated tiles and fixed-format UI.
 - Avoid full-screen hero sections that hide the next section on landing pages.
 - Use real images or generated bitmap images for subject matter when users need to inspect the thing being sold.
+- Avoid identical section rhythms. Change density, alignment, or reading mode between major sections.
+- Use whitespace as a structural tool, not empty decoration.
+- Keep labels, metadata, timestamps, statuses, and counts believable.
+
+## Typography And Content
+
+- Write UI copy as product behavior, not marketing fog.
+- Use concrete nouns and verbs: import, approve, schedule, export, reconcile, record, publish, route, pay, compare.
+- Use real-feeling labels: customer names, file names, statuses, dates, prices, durations, tags, locations, and counts.
+- Make headings shorter than the supporting body. Do not stack multiple slogan lines.
+- Pair display type with a clear body hierarchy. Do not use hero-scale type inside compact cards or controls.
+- If the type scale is the main visual idea, keep color and surfaces calmer.
 
 ## Palette Guidance
 
