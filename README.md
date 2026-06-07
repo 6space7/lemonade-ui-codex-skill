@@ -12,6 +12,7 @@ Lemonade UI is for frontend work that should feel alive without becoming noisy: 
 - Keep motion accessible with reduced-motion behavior.
 - Avoid common AI design traps like nested cards, decorative blobs, vague gradients, and components that only work with short demo copy.
 - Verify responsive layout, text fit, contrast, interaction states, and build quality before calling work complete.
+- Run a small audit script that flags common AI-ish and buggy frontend patterns.
 
 ## Install
 
@@ -52,6 +53,7 @@ Redesign this dashboard so it feels modern but still useful for operators.
 lemonade-ui/
   SKILL.md
   agents/openai.yaml
+  scripts/audit_lemonade_design.py
   references/design-language.md
   references/motion-recipes.md
   references/review-checklist.md
@@ -64,6 +66,15 @@ The main `SKILL.md` stays short so it can load quickly. Detailed guidance is spl
 - `design-language.md` covers taste, layout, page archetypes, palette, and mistakes to avoid.
 - `motion-recipes.md` covers GSAP/CSS/React interaction patterns and reduced-motion safety.
 - `review-checklist.md` is the final quality gate before shipping frontend work.
+- `scripts/audit_lemonade_design.py` is a lightweight smoke test for common design and interaction traps.
+
+## Audit A Local Frontend
+
+```bash
+python3 lemonade-ui/scripts/audit_lemonade_design.py /path/to/frontend
+```
+
+The audit catches obvious problems only. It does not replace browser screenshots, mobile checks, or taste judgment.
 
 ## Suggested GitHub Description
 

@@ -9,6 +9,8 @@ Use this reference when adding Lemonade UI-style interaction, especially in Reac
 - Prefer one signature motion per section.
 - Make hover and focus states equivalent where possible.
 - Provide a reduced-motion path for pointer-reactive, looping, or entrance motion.
+- Never use motion to compensate for weak layout or vague product content.
+- Do not animate dimensions that can reflow surrounding content unless the container is explicitly reserved.
 
 ## Recipes
 
@@ -87,6 +89,18 @@ Use sparingly for editorial/contact surfaces.
 - Kill or overwrite tweens when repeated pointer events can stack.
 - Keep dependencies explicit.
 - Do not animate layout-critical dimensions unless the container is stable.
+- Use `overwrite: true` for pointer-following tweens.
+- Reset transformed elements on pointer leave, blur, unmount, and reduced-motion changes.
+- Keep animated selectors scoped to the component root to avoid cross-component collisions.
+
+## Bug Traps
+
+- Hover animation changes width/height and pushes siblings.
+- A loop keeps running after unmount.
+- Reduced-motion disables animation but leaves content hidden at opacity `0`.
+- Pointer math assumes the element never moves.
+- Touch devices require hover to reveal important content.
+- Scroll-triggered reveals hide content when JavaScript fails.
 
 ## Reduced Motion
 

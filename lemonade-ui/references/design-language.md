@@ -10,6 +10,27 @@ Use this reference when choosing the visual direction for a Lemonade UI-style pa
 - Make text, media, controls, and motion feel composed as one scene.
 - Build controls users recognize. Style them richly, but do not make common actions mysterious.
 
+## Anti-AI Standard
+
+Assume the first idea is probably too generic. Before implementing, identify the most likely AI-ish failure and design against it.
+
+Reject:
+
+- Hero sections that are mostly a centered headline, pill, CTA pair, and gradient blob.
+- "AI-powered" copy without a concrete user action or product artifact.
+- Fake dashboards with generic cards named Analytics, Insights, Automation, Growth, or Revenue.
+- Endless rounded cards with icons and short blurbs.
+- Purple/blue mesh gradients as the main art direction.
+- Abstract SVG decoration where product UI, real media, or a generated bitmap scene would be more specific.
+- Decorative motion that does not reveal, confirm, navigate, select, complete, or explain state.
+
+Replace with:
+
+- A believable product surface with real labels, rows, tabs, filters, records, charts, controls, or states.
+- A domain-specific object or media moment.
+- A specific workflow: before/after, queue/detail, picker/preview, edit/export, schedule/confirm, browse/compare, plan/pay.
+- One memorable interaction tied to that workflow.
+
 ## Composition Patterns
 
 ### Product Landing
@@ -24,6 +45,8 @@ Good first-viewport ingredients:
 - Trust or proof that does not crowd the hero.
 - A visible next section edge.
 
+Quality test: hide the logo. If the page could still be any random SaaS, the product surface is not specific enough.
+
 ### Component Lab
 
 Make each component installable in spirit even when it is not a package. Use typed props, defaults, accessible labels, and no demo-only assumptions.
@@ -36,11 +59,15 @@ Good components have:
 - Stable sizing under hover, loading, and long text.
 - A static state that still looks intentional.
 
+Quality test: swap in longer labels, missing optional props, and reduced motion. The component should remain stable.
+
 ### Dashboard or Admin
 
 Keep it quiet and useful. Put navigation, filters, tables, detail panes, status chips, and repeated actions in predictable places. Use motion for continuity and confirmation, not spectacle.
 
 Avoid marketing-style hero sections in operational tools.
+
+Quality test: a repeated operator should understand the next action in under three seconds.
 
 ### Portfolio or Editorial
 
@@ -64,6 +91,9 @@ Avoid dark blurred atmosphere when users need to understand the venue.
 - Do not use negative letter spacing.
 - Use `text-wrap: balance` or careful line breaks only where it improves readability.
 - For long values in controls, intentionally wrap, truncate, or resize so text never escapes its container.
+- Use stable min-height, aspect-ratio, or grid tracks for repeated tiles and fixed-format UI.
+- Avoid full-screen hero sections that hide the next section on landing pages.
+- Use real images or generated bitmap images for subject matter when users need to inspect the thing being sold.
 
 ## Palette Guidance
 
@@ -85,3 +115,7 @@ Avoid a page that reads as all purple, all beige, all slate, all brown/orange, o
 - Buttons that look like labels.
 - Mobile layout treated as an afterthought.
 - Stock-feeling imagery that hides the thing being sold.
+- One viewport looks good while mobile breaks.
+- Text uses viewport units and explodes on wide or narrow screens.
+- Hover effects resize the layout.
+- The design is "premium" only because everything is blurred, glassy, and rounded.

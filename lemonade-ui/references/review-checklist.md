@@ -8,6 +8,8 @@ Use this before finishing a Lemonade UI-style frontend task.
 - The main action is visible and clearly clickable.
 - The page uses specific content instead of generic placeholder marketing.
 - The visual hook belongs to the domain.
+- Hiding the logo would not make the page feel like any random AI SaaS template.
+- The product artifact has credible labels, data, states, and controls.
 
 ## Layout
 
@@ -16,6 +18,9 @@ Use this before finishing a Lemonade UI-style frontend task.
 - Fixed-format UI elements have stable dimensions.
 - There are no nested cards.
 - The next section is hinted below landing-page heroes.
+- No unintended horizontal scroll exists.
+- Hover, loading, selected, and expanded states do not shift surrounding layout.
+- Long labels and realistic data still fit.
 
 ## Interaction
 
@@ -23,6 +28,8 @@ Use this before finishing a Lemonade UI-style frontend task.
 - Hover, focus, active, disabled, and loading states are accounted for where relevant.
 - Icon-only controls have accessible labels.
 - Pointer-only interactions have keyboard/click alternatives when they perform actions.
+- Reduced-motion users get a polished static experience.
+- Repeated pointer events cannot stack broken animations.
 
 ## Visual Taste
 
@@ -31,6 +38,8 @@ Use this before finishing a Lemonade UI-style frontend task.
 - Typography scale matches context.
 - Letter spacing is not negative.
 - Images/media reveal the real subject when inspection matters.
+- The page has one clear art-direction idea, not a pile of effects.
+- Generic "AI-powered" claims are replaced with concrete user actions and proof.
 
 ## Engineering
 
@@ -39,3 +48,5 @@ Use this before finishing a Lemonade UI-style frontend task.
 - Reduced-motion behavior is present.
 - Relevant checks pass or failures are clearly explained.
 - Browser inspection was performed for frontend changes when possible.
+- Desktop and mobile screenshots or observations were used to catch visual bugs.
+- `scripts/audit_lemonade_design.py <path>` was run when available and local files exist.
