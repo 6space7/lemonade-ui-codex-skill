@@ -56,6 +56,10 @@ lemonade-ui/
   agents/openai.yaml
   scripts/audit_lemonade_design.py
   references/anti-ai-slop.md
+  references/calibration-operational-ui.md
+  references/calibration-overcopy-and-scale.md
+  references/calibration-product-proof.md
+  references/calibration-responsive-composition.md
   references/copy-compression.md
   references/design-spine.md
   references/design-language.md
@@ -71,6 +75,10 @@ lemonade-ui/
 The main `SKILL.md` is a router so it can load quickly. Detailed guidance is split into small one-purpose references:
 
 - `anti-ai-slop.md` catches generic AI/template aesthetics.
+- `calibration-overcopy-and-scale.md` fixes huge type, yapping, and weak copy rhythm.
+- `calibration-product-proof.md` moves vague claims into credible visible product evidence.
+- `calibration-responsive-composition.md` prevents desktop-to-mobile stacking mistakes.
+- `calibration-operational-ui.md` keeps dashboards and tools dense, useful, and calm.
 - `copy-compression.md` keeps pages from over-yapping.
 - `design-language.md` covers taste, layout, page archetypes, palette, and mistakes to avoid.
 - `design-spine.md` forces the core design decisions before motion.

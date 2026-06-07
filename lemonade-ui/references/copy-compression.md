@@ -20,18 +20,18 @@ The product surface should carry the workflow. Copy should name the promise, act
 
 Bad:
 
-- "Turn map searches into verified business data."
-- "MapHarvest opens each business profile, reads the richer panel data, validates the fields, and exports clean CSV rows for sales, research, agencies, and ops teams."
+- "Our platform helps teams transform complex workflows into trusted operational clarity with less manual effort."
+- "Everything your team needs to collaborate, validate, analyze, and move faster from one modern workspace."
 
 Better:
 
-- "Verified leads from map search."
-- "Open profiles, validate phone/site/hours, export CSV."
+- "Review 24 pending records."
+- "Approve changes, catch gaps, ship the report."
 
 More tactile:
 
-- "Scrape maps. Verify profiles. Export leads."
-- "523 verified profiles ready for CSV."
+- "Import. Review. Approve."
+- "24 records ready for export."
 
 ## Delete List
 
@@ -57,4 +57,4 @@ Remove or rewrite:
 - "Boost productivity with AI" -> "Approve 12 follow-ups before 3 PM."
 - "Advanced analytics" -> "17 demos booked, 4 no-shows, 2 contracts pending."
 - "Automated workflows" -> "Overdue 7 days -> send reminder -> open finance task."
-- "Get started" -> "Import contacts", "Start scraping", "Create workspace", "Export CSV".
+- "Get started" -> "Import contacts", "Approve records", "Create workspace", "Export report".

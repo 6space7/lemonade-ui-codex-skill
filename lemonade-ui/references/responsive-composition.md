@@ -38,7 +38,7 @@ For tools/dashboards:
 
 ## Desktop Rules
 
-- Use wide space to create contrast: artifact vs narrative, list vs detail, map vs profile, media vs metadata.
+- Use wide space to create contrast: artifact vs narrative, list vs detail, work surface vs inspector, media vs metadata.
 - Avoid two giant framed cards with equal weight.
 - Let one product artifact dominate.
 - Use side panels only when they clarify the workflow.

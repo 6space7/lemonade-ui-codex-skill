@@ -40,7 +40,39 @@ class Rule:
     message: str
 
 
+def phrase(*parts: str) -> str:
+    return "".join(parts)
+
+
+SCREENSHOT_SPECIFIC_PATTERNS = [
+    r"\b" + phrase("Map", "Harvest") + r"\b",
+    r"\b" + phrase("map ", "search ", "scraper") + r"\b",
+    r"\b" + phrase("profile-", "panel ", "scraper") + r"\b",
+    r"\b" + phrase("Turn ", "map ", "searches ", "into ", "verified ", "business ", "data") + r"\b",
+    r"\b" + phrase("Verified ", "leads ", "from ", "map ", "search") + r"\b",
+    r"\b" + phrase("Scrape ", "maps") + r"\b",
+]
+
+VERTICAL_SPECIFIC_PATTERNS = [
+    r"\b" + phrase("map/", "profile/", "export") + r"\b",
+    r"\b" + phrase("map ", "search") + r"\b",
+    r"\b" + phrase("opened ", "profile") + r"\b",
+]
+
+
 RULES = [
+    Rule(
+        "CAL001",
+        "error",
+        re.compile("|".join(SCREENSHOT_SPECIFIC_PATTERNS), re.I),
+        "Screenshot-specific calibration language leaked into the skill or UI.",
+    ),
+    Rule(
+        "CAL002",
+        "warn",
+        re.compile("|".join(VERTICAL_SPECIFIC_PATTERNS), re.I),
+        "Avoid product-category-specific examples in general calibration guidance.",
+    ),
     Rule(
         "AI001",
         "warn",

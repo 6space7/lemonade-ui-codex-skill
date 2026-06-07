@@ -7,7 +7,7 @@ Use this before building a new page, section, component family, or redesign. The
 Make these decisions before writing UI code:
 
 1. **Product evidence:** What concrete thing proves the product exists?
-   Examples: app screen, editor canvas, payment form, schedule, inbox, file object, analytics table, media gallery, map, device frame, CLI output, physical product, customer quote, or before/after workflow.
+   Examples: app screen, editor canvas, payment form, schedule, inbox, file object, analytics table, media gallery, location view, device frame, CLI output, physical product, customer quote, or before/after workflow.
 
 2. **Layout lane:** What composition pattern carries the page?
    Examples: editorial split with oversized media, dense product console, full-bleed gallery, left rail plus detail pane, centered commerce configurator, timeline story, magazine grid, board/workspace, stacked comparison, or compact operations dashboard.
@@ -72,7 +72,7 @@ Pick one lane and commit:
 - **Tactile toy:** Soft controls, physical metaphors, saturated accents, press/drag feedback, playful but still usable.
 - **Technical console:** Dark or neutral surface, code/log/detail panes, diagrams, status lights, exact labels.
 - **Commerce object:** Product inspection, variants, pricing, shipping, reviews, sticky purchase path.
-- **Hospitality/place:** Real imagery, booking/menu/map/schedule, warm surfaces, local details.
+- **Hospitality/place:** Real imagery, booking/menu/schedule/directions, warm surfaces, local details.
 - **Creative lab:** Component previews, install affordances, knobs, live states, clear API/use surface.
 
 Avoid mixing more than two lanes on one page.
