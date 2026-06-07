@@ -19,6 +19,7 @@ Use this before finishing a Lemonade UI-style frontend task.
 - Product evidence, layout, typography, material, content rhythm, and interaction budget are all accounted for.
 - The static screenshot works before animation.
 - The design has a memorable visual idea beyond hover or scroll effects.
+- The page has Lemonade DNA: strong stage/frame/crop/object/material/spatial idea, not just competent layout.
 
 ## Layout
 
@@ -50,6 +51,7 @@ Use this before finishing a Lemonade UI-style frontend task.
 - Letter spacing is not negative.
 - Images/media reveal the real subject when inspection matters.
 - The page has one clear art-direction idea, not a pile of effects.
+- Product artifacts feel dimensional and designed, not like flat placeholder mockups.
 - Generic "AI-powered" claims are replaced with concrete user actions and proof.
 
 ## Engineering

@@ -10,13 +10,13 @@ Make these decisions before writing UI code:
    Examples: app screen, editor canvas, payment form, schedule, inbox, file object, analytics table, media gallery, location view, device frame, CLI output, physical product, customer quote, or before/after workflow.
 
 2. **Layout lane:** What composition pattern carries the page?
-   Examples: editorial split with oversized media, dense product console, full-bleed gallery, left rail plus detail pane, centered commerce configurator, timeline story, magazine grid, board/workspace, stacked comparison, or compact operations dashboard.
+   Examples: cinematic stage, shaped poster frame, layered object collage, editorial split with oversized media, dense product console, full-bleed gallery, left rail plus detail pane, centered commerce configurator, timeline story, magazine grid, board/workspace, stacked comparison, or compact operations dashboard.
 
 3. **Type relationship:** What does typography do?
    Examples: quiet utility sans, editorial display plus functional body, mono for technical proof, condensed labels with roomy body text, large numeric metrics, or understated enterprise hierarchy.
 
 4. **Material system:** What are surfaces made of?
-   Examples: paper and ink, glass and chrome, matte panels, dense table rows, soft plastic controls, editorial photo fields, dark technical console, warm hospitality surfaces, or crisp commerce cards.
+   Examples: cinematic black stage, shaped brand field, paper and ink, glass and chrome, matte panels, dense table rows, soft plastic controls, editorial photo fields, dark technical console, warm hospitality surfaces, or crisp commerce cards.
 
 5. **Content rhythm:** How does the eye move?
    Examples: headline -> product artifact -> CTA, media -> metadata -> case study, filter -> list -> detail, price -> plan -> proof, problem -> workflow -> outcome, gallery -> booking -> location.
@@ -74,6 +74,8 @@ Pick one lane and commit:
 - **Commerce object:** Product inspection, variants, pricing, shipping, reviews, sticky purchase path.
 - **Hospitality/place:** Real imagery, booking/menu/schedule/directions, warm surfaces, local details.
 - **Creative lab:** Component previews, install affordances, knobs, live states, clear API/use surface.
+- **Cinematic product stage:** Dark or high-contrast field, strong product artifact, glow/texture/lighting, poster-like type.
+- **Shaped brand poster:** Oversized rounded/cutout container, capsule nav, framed product object, bold accent field.
 
 Avoid mixing more than two lanes on one page.
 

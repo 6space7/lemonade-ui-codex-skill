@@ -7,6 +7,7 @@ Use this as the short taste index. For detailed work, load the focused reference
 - Specific product evidence before decoration.
 - Product artifact before software-preview wallpaper.
 - Default SaaS hero escape before polish.
+- Lemonade visual DNA before safe template composition.
 - Strong static composition before animation.
 - Sharp copy before big typography.
 - Credible controls before fancy surfaces.
@@ -28,6 +29,7 @@ If a later layer is doing the work of an earlier layer, go back. Animation canno
 ## Reference Map
 
 - Need direction: `design-spine.md`.
+- Needs Lemonade vibe: `lemonade-visual-dna.md`.
 - SaaS hero feels default: `saas-hero-escape-system.md`.
 - Need product artifact: `product-artifact-selection.md`.
 - Too much text: `copy-compression.md`.

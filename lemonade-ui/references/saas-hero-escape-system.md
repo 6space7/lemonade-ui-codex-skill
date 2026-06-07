@@ -22,6 +22,8 @@ Pick at least one before coding:
 
 - **Artifact-led:** product artifact dominates; headline supports it.
 - **Editorial crop:** show one enlarged product slice with metadata around it.
+- **Cinematic stage:** build a dark or high-contrast product poster with one lit artifact.
+- **Shaped frame:** use a cutout, capsule nav, oversized rounded field, or carved container as the hero idea.
 - **Task first:** lead with a queue, approval, selected task, or next action.
 - **Object detail:** show one record, file, contact, product, job, ticket, clip, order, or deployment.
 - **Before/after:** show input, transformation, and output.
@@ -63,3 +65,7 @@ Metrics are proof only when attached to visible product state.
 Mobile must reveal product proof early. No mobile first viewport should be only brand, badge, giant headline, paragraph, and stacked CTAs.
 
 If the artifact cannot fit, show a focused crop, selected record, output card, or active task instead of shrinking the whole desktop preview.
+
+## Visual DNA Check
+
+After escaping the default stack, load `lemonade-visual-dna.md` and make sure the hero has one positive design idea: stage, frame, crop, object, material, or spatial gesture.
