@@ -1,4 +1,4 @@
 interface:
   display_name: "Lemonade UI"
   short_description: "Modern animated frontend design skill"
-  default_prompt: "Use $lemonade-ui to create a design contract with spacing and interaction briefs, then design and build a modern animated landing page."
+  default_prompt: "Use $lemonade-ui to create a design contract with no-dashboard hero proof, spacing, and interaction briefs, then design and build a modern animated landing page."

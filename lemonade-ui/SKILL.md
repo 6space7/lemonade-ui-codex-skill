@@ -17,6 +17,7 @@ The contract must choose:
 
 - **Product moment:** the specific user job, state, object, or workflow being shown.
 - **Dominant artifact:** the screenshot, selected record, editor, table/detail view, object, media, output, or workflow fragment that proves the product.
+- **Dashboard/app screen:** whether a full software screen is allowed; default to "no" for vague landing heroes.
 - **Composition lane:** the layout structure that carries the page.
 - **Lemonade DNA move:** one stage, frame, crop, object, material, glow, depth, or spatial gesture.
 - **Mobile first proof:** what product proof appears in the first mobile viewport.
@@ -31,6 +32,7 @@ Use this shape in working notes before implementation:
 Design contract:
 Moment: ...
 Artifact: ...
+Dashboard/app screen: ...
 Composition: ...
 DNA move: ...
 Mobile proof: ...
@@ -69,6 +71,7 @@ Load only the files needed for the current problem:
 - `references/interaction-quality.md`: use before adding animation, hover states, tactile controls, or interactive polish.
 - `references/saas-hero-escape-system.md`: use before SaaS/product/startup landing heroes to avoid the generic AI SaaS hero stack.
 - `references/product-artifact-selection.md`: use before product proof to choose the right artifact, workflow fragment, or operational surface.
+- `references/no-dashboard-proof.md`: use when a landing hero might become a dashboard, app-window mockup, table/detail workbench, or framed software preview by default.
 - `references/recipes/dark-product-theatre.md`: use for cinematic dark stages with one lit product artifact.
 - `references/recipes/shaped-poster-frame.md`: use for carved, capsule, rounded, or poster-field compositions.
 - `references/recipes/artifact-collage.md`: use for layered product objects, cards, files, records, media, or proof fragments.
@@ -117,6 +120,7 @@ If files exist locally, run `scripts/audit_lemonade_design.py <path>` before fin
    - Load `product-artifact-selection.md` when product proof is needed.
    - Prefer real screenshots/media, workflow fragments, selected objects, before/after outputs, or operational surfaces.
    - Use dashboards only when the product is genuinely dashboard-first and the dashboard behaves like a real work surface.
+   - For vague SaaS/CRM/product landing heroes, load `no-dashboard-proof.md` and default to no full dashboard/app screen.
 
 7. Choose a composition recipe.
    - Pick one recipe when the visual direction is open or the design starts drifting into a generic template.
@@ -174,6 +178,7 @@ Do not ship while any are true:
 - Spacing is eyeballed with random gaps, equal padding everywhere, or no clear rhythm.
 - The hero is text over a blob, orb, mesh gradient, or vague abstract background.
 - The main product artifact is a fake dashboard with generic Analytics/Growth/Automation/Insights cards.
+- A vague SaaS/CRM/product hero uses a full dashboard, app window, or multi-pane workbench without the user asking for one.
 - The page defaults to a generic split hero with a framed software preview, loose stats, placeholder branding, and no stronger composition idea.
 - Mobile first viewport is mostly brand, badge, oversized headline, paragraph, and stacked CTAs before product proof.
 - The guidance or output is quietly copying one sample product category instead of solving the current user's product.

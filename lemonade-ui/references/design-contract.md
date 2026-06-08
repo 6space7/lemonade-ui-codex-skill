@@ -12,6 +12,7 @@ Write a compact contract in working notes:
 Design contract:
 Moment: ...
 Artifact: ...
+Dashboard/app screen: ...
 Composition: ...
 DNA move: ...
 Mobile proof: ...
@@ -25,6 +26,7 @@ Avoiding: ...
 
 - **Moment:** one specific job, state, workflow, or object. Avoid broad category claims.
 - **Artifact:** the visible proof object. Prefer selected records, editors, files, media, rows, messages, outputs, timelines, tables, objects, or real screenshots.
+- **Dashboard/app screen:** default to "no" for vague landing heroes. Say "yes" only when the user asked for a dashboard/admin/app screen or the product is truly dashboard-first.
 - **Composition:** choose one layout lane or recipe. Do not default to a generic split hero.
 - **DNA move:** one memorable stage, frame, crop, object, material, glow, dimensional layer, or spatial gesture.
 - **Mobile proof:** what the first mobile viewport shows before the user scrolls far.
@@ -68,6 +70,7 @@ Reject contracts like:
 
 - Moment: "AI productivity for teams"
 - Artifact: "dashboard mockup"
+- Dashboard/app screen: "yes because SaaS"
 - Composition: "modern split hero"
 - DNA move: "gradient background"
 - Mobile proof: "mockup below text"
@@ -86,12 +89,13 @@ Example:
 Design contract:
 Moment: Turn a stale renewal note into an approved follow-up.
 Artifact: Selected account record, call note, draft reply, and approval action.
+Dashboard/app screen: No; use standalone record, note, and output artifacts rather than a full CRM workbench.
 Composition: Dark product theatre with the selected record cropped large.
-DNA move: Lit work surface with two floating proof chips and a side annotation.
+DNA move: Lit artifact stage with two floating proof chips and a side annotation.
 Mobile proof: Selected account card and approval button appear before secondary copy.
 Spacing: 24px mobile shell, 1200px desktop container, 32px hero gutter, 16/24px panel rhythm, 48px CTA row.
 Copy budget: 3-line headline, 18-word paragraph, one primary CTA, no loose stats.
-Interaction: Selecting a queued account updates the detail pane; 220ms state change, no layout shift.
+Interaction: Approving the draft changes the card to scheduled; 220ms state change, no layout shift.
 Avoiding: generic split hero, framed dashboard wallpaper, floating metrics row.
 ```
 
@@ -100,6 +104,7 @@ Avoiding: generic split hero, framed dashboard wallpaper, floating metrics row.
 After the browser screenshot:
 
 - If the artifact does not dominate, enlarge, crop, or move it earlier.
+- If a vague hero became a dashboard/app screen, replace it with a selected object, output, transcript, card stack, before/after, or action artifact.
 - If mobile proof is late, rewrite mobile order instead of shrinking desktop.
 - If spacing feels accidental, define the rhythm and remove random gaps.
 - If the DNA move is invisible, strengthen the stage, frame, crop, material, or object.

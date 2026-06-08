@@ -13,6 +13,8 @@ Prefer the highest truthful artifact available:
 5. Operational surface: table/list, filters, selected detail, actions, statuses.
 6. Dashboard only when the product is genuinely dashboard-first.
 
+For landing-page heroes, use `no-dashboard-proof.md` unless the user explicitly asks for a dashboard, admin panel, analytics view, or app screen.
+
 ## Dashboard Rule
 
 Dashboard views are allowed when they are the actual product surface. They must include real work:
@@ -25,9 +27,11 @@ Dashboard views are allowed when they are the actual product surface. They must 
 
 If the dashboard is only charts, cards, and summary numbers, reject it.
 
+For vague SaaS/CRM/product heroes, also reject dashboards that are "real enough" but still behave as a framed app preview beside marketing copy. Replace the full screen with a standalone object, output, card stack, transcript, before/after, timeline fragment, or action artifact.
+
 ## Domain Defaults
 
-- **CRM:** contact, deal, follow-up task, call note, email approval, stale account, handoff, pipeline action.
+- **CRM:** contact card, deal card, follow-up task, call note, email approval, stale account note, handoff slip, pipeline action, before/after follow-up artifact.
 - **AI product:** source input, generated output, edit controls, confidence, citations, export.
 - **Developer tool:** log, trace, diff, CLI output, config, deploy, alert, error state.
 - **Commerce:** product detail, configurator, cart, variant, review, shipping, checkout.

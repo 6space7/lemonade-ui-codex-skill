@@ -8,6 +8,7 @@ Lemonade UI is for frontend work that should feel alive without becoming noisy: 
 
 - Create a mandatory design contract before open-ended frontend coding.
 - Force spacing rhythm and interaction briefs instead of eyeballed gaps and decorative motion.
+- Default vague SaaS/CRM heroes away from dashboard/app-window mockups.
 - Design from a real product moment instead of a generic template.
 - Apply Lemonade visual DNA: cinematic contrast, shaped frames, layered product objects, and a memorable visual idea.
 - Use concrete composition recipes instead of vague "modern premium" adjectives.
@@ -47,6 +48,7 @@ For best results, expect Codex to create a short design contract before coding:
 Design contract:
 Moment: ...
 Artifact: ...
+Dashboard/app screen: ...
 Composition: ...
 DNA move: ...
 Mobile proof: ...
@@ -89,6 +91,7 @@ lemonade-ui/
   references/interaction-quality.md
   references/lemonade-visual-dna.md
   references/motion-recipes.md
+  references/no-dashboard-proof.md
   references/product-artifact-selection.md
   references/product-evidence.md
   references/responsive-composition.md
@@ -120,6 +123,7 @@ The main `SKILL.md` is a fast router with a hard design-contract gate. Detailed 
 - `interaction-quality.md` forces a motion brief and stateful interaction rules before adding animation.
 - `lemonade-visual-dna.md` captures the positive Lemonade look: cinematic stages, shaped frames, layered objects, strong material, and deliberate type.
 - `motion-recipes.md` covers GSAP/CSS/React interaction patterns and reduced-motion safety.
+- `no-dashboard-proof.md` keeps vague landing heroes from becoming dashboard or app-window mockups.
 - `product-artifact-selection.md` chooses the right visible artifact before product proof is designed.
 - `product-evidence.md` helps turn vague claims into visible product proof.
 - `responsive-composition.md` handles mobile/desktop composition strategy.

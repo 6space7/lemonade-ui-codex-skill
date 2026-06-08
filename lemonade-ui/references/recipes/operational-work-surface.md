@@ -1,6 +1,8 @@
 # Recipe: Operational Work Surface
 
-Use for dashboards, admin tools, CRM, finance ops, support queues, internal tools, and dense SaaS surfaces.
+Use for dashboards, admin tools, finance ops, support queues, internal tools, and dense SaaS surfaces when the user asked for an operational interface or the product is clearly dashboard-first.
+
+Do not use this as the default hero recipe for vague SaaS, CRM, AI, devtool, or product landing prompts. In those cases, use `../no-dashboard-proof.md` first and choose a standalone artifact.
 
 ## Structure
 
@@ -16,6 +18,8 @@ Use for dashboards, admin tools, CRM, finance ops, support queues, internal tool
 - Exception lane with review/approve controls.
 - Timeline with selected event and next action.
 - Split workbench: source input, processing state, output/action.
+
+For landing heroes, crop this into one selected object or action artifact unless the user explicitly wants the full app surface.
 
 ## Type
 
@@ -38,6 +42,7 @@ Use for dashboards, admin tools, CRM, finance ops, support queues, internal tool
 
 ## Avoid
 
+- Using this recipe as automatic hero proof for vague SaaS/CRM prompts.
 - Four KPI cards as proof.
 - Fake charts without controls or selected state.
 - Dashboard wallpaper beside marketing copy.

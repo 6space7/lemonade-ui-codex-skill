@@ -114,6 +114,31 @@ PRODUCT_PROOF_PATTERNS = [
     r"\b" + phrase("artifact") + r"\b",
 ]
 
+WORKBENCH_HERO_PATTERNS = [
+    r"\b" + phrase("queue") + r"\b",
+    r"\b" + phrase("selected ", "account") + r"\b",
+    r"\b" + phrase("selected ", "record") + r"\b",
+    r"\b" + phrase("detail ", "pane") + r"\b",
+    r"\b" + phrase("action ", "drawer") + r"\b",
+    r"\b" + phrase("work", "bench") + r"\b",
+    r"\b" + phrase("app ", "shell") + r"\b",
+    r"\b" + phrase("side", "bar") + r"\b",
+    r"\b" + phrase("multi-", "pane") + r"\b",
+    r"\b" + phrase("table/", "detail") + r"\b",
+    r"\b" + phrase("list/", "detail") + r"\b",
+]
+
+NON_DASHBOARD_ARTIFACT_PATTERNS = [
+    r"\b" + phrase("transcript") + r"\b",
+    r"\b" + phrase("email ", "draft") + r"\b",
+    r"\b" + phrase("receipt") + r"\b",
+    r"\b" + phrase("before/", "after") + r"\b",
+    r"\b" + phrase("card ", "stack") + r"\b",
+    r"\b" + phrase("output ", "artifact") + r"\b",
+    r"\b" + phrase("call ", "note") + r"\b",
+    r"\b" + phrase("timeline ", "fragment") + r"\b",
+]
+
 CTA_LABEL_PATTERNS = [
     r"\b" + phrase("book ", "demo") + r"\b",
     r"\b" + phrase("start ", "free") + r"\b",
@@ -131,6 +156,8 @@ HERO_PATTERN = re.compile(r"\b(hero|landing|masthead)\b", re.I)
 TWO_COLUMN_PATTERN = re.compile(r"\b(?:grid-cols-2|md:grid-cols-2|lg:grid-cols-2|xl:grid-cols-2|split)\b", re.I)
 ARTIFACT_PATTERN = re.compile("|".join(DEFAULT_HERO_ARTIFACT_PATTERNS), re.I)
 PROOF_PATTERN = re.compile("|".join(PRODUCT_PROOF_PATTERNS), re.I)
+WORKBENCH_PATTERN = re.compile("|".join(WORKBENCH_HERO_PATTERNS), re.I)
+NON_DASHBOARD_PATTERN = re.compile("|".join(NON_DASHBOARD_ARTIFACT_PATTERNS), re.I)
 CTA_PATTERN = re.compile("|".join(CTA_LABEL_PATTERNS), re.I)
 FULL_SCREEN_PATTERN = re.compile(r"\b(?:min-h-screen|h-screen)\b|height\s*:\s*100(?:vh|svh|dvh)", re.I)
 HOVER_PATTERN = re.compile(r"\bhover:", re.I)
@@ -298,6 +325,8 @@ def file_level_findings(path: Path, text: str) -> list[tuple[str, str, Path, int
     has_two_column = bool(TWO_COLUMN_PATTERN.search(text))
     has_large_type = bool(LARGE_TYPE_PATTERN.search(text))
     has_specific_proof = bool(PROOF_PATTERN.search(text))
+    has_workbench_proof = bool(WORKBENCH_PATTERN.search(text))
+    has_non_dashboard_artifact = bool(NON_DASHBOARD_PATTERN.search(text))
     has_full_screen = bool(FULL_SCREEN_PATTERN.search(text))
     has_hover = bool(HOVER_PATTERN.search(text))
     has_focus = bool(FOCUS_PATTERN.search(text))
@@ -337,6 +366,30 @@ def file_level_findings(path: Path, text: str) -> list[tuple[str, str, Path, int
                 path,
                 line_number(text, offset.start()) if offset else 1,
                 "Large hero type appears to outrank product proof; verify artifact visibility, especially on mobile.",
+            )
+        )
+
+    if has_hero and has_two_column and has_workbench_proof and not has_non_dashboard_artifact:
+        offset = WORKBENCH_PATTERN.search(text)
+        findings.append(
+            (
+                "warn",
+                "AI011",
+                path,
+                line_number(text, offset.start()) if offset else 1,
+                "Dashboard-like hero proof detected; vague landing pages should prefer a standalone artifact unless a full app screen was requested.",
+            )
+        )
+
+    if has_hero and has_h1 and has_paragraph and has_workbench_proof and has_two_ctas:
+        offset = WORKBENCH_PATTERN.search(text)
+        findings.append(
+            (
+                "warn",
+                "AI012",
+                path,
+                line_number(text, offset.start()) if offset else 1,
+                "Hero copy plus CTAs plus queue/detail/workbench proof can become a mock dashboard layout.",
             )
         )
 

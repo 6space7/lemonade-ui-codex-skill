@@ -2,7 +2,7 @@
 
 Use this for SaaS, startup, product, AI tool, CRM, devtool, and landing-page hero work. The goal is to escape the default AI SaaS hero before writing code.
 
-Start by filling `design-contract.md`. The contract must name the product moment, dominant artifact, composition move, mobile proof, copy budget, and default pattern being avoided.
+Start by filling `design-contract.md`. The contract must name the product moment, dominant artifact, dashboard/app-screen decision, composition move, mobile proof, copy budget, and default pattern being avoided.
 
 ## Reject The Default Stack
 
@@ -18,6 +18,12 @@ Do not start from this stack unless the user explicitly asks for it and the prod
 
 This stack is not automatically wrong, but it is the current generic default. If you use it, add a stronger composition move and visible product proof early.
 
+## Dashboard Default
+
+For vague SaaS, CRM, AI, devtool, finance, and product landing heroes, default to no full dashboard, app window, or multi-pane workbench.
+
+Load `no-dashboard-proof.md` and choose a standalone artifact first. Use table/detail, queue/detail, or dashboard surfaces only when the user asked for that kind of interface or the product is explicitly dashboard-first.
+
 ## Choose One Escape Move
 
 Pick at least one before coding:
@@ -31,7 +37,7 @@ Pick at least one before coding:
 - **Before/after:** show input, transformation, and output.
 - **Timeline:** show a sequence of signals, changes, or decisions.
 - **Transcript/message:** show conversation, call, email, or notes becoming an action.
-- **Table/detail workspace:** rows plus selected detail and attached actions.
+- **Table/detail workspace:** rows plus selected detail and attached actions. Use only when an operational app surface is explicitly needed; otherwise convert it into a selected object, card stack, timeline, or output artifact.
 - **Canvas/editor:** input surface, controls, preview, and export.
 - **Control surface:** a real configurator, scrubber, command palette, or stateful tool.
 
@@ -40,7 +46,7 @@ Then choose the closest recipe:
 - Dark/high-contrast hero -> `recipes/dark-product-theatre.md`.
 - Big shaped field or carved frame -> `recipes/shaped-poster-frame.md`.
 - Several proof fragments -> `recipes/artifact-collage.md`.
-- Dense list/detail product proof -> `recipes/operational-work-surface.md`.
+- Dense list/detail product proof -> `recipes/operational-work-surface.md` only when dashboard/app screen is allowed.
 - Multi-section story -> `recipes/editorial-product-story.md`.
 
 ## Vague Prompt Rule

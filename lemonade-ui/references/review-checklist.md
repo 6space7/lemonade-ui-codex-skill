@@ -5,6 +5,7 @@ Use this before finishing a Lemonade UI-style frontend task.
 ## Product Clarity
 
 - The implementation matches the design contract.
+- The dashboard/app-screen decision in the contract is respected.
 - The chosen default pattern was actually avoided.
 - The first viewport says what the product, place, object, or workflow is.
 - The main action is visible and clearly clickable.
@@ -13,6 +14,7 @@ Use this before finishing a Lemonade UI-style frontend task.
 - Hiding the logo would not make the page feel like any random AI SaaS template.
 - The product artifact has credible labels, data, states, and controls.
 - Landing heroes escape the default SaaS stack or clearly justify it.
+- Vague SaaS/CRM/product heroes do not use full dashboards, app windows, or multi-pane workbenches unless explicitly justified.
 - Metrics are connected to visible product state.
 
 ## Design Spine
