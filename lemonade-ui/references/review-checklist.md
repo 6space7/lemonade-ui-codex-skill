@@ -20,6 +20,7 @@ Use this before finishing a Lemonade UI-style frontend task.
 ## Design Spine
 
 - Product moment, artifact, composition, DNA move, mobile proof, copy budget, and avoided default are all clear.
+- Composition discipline is clear: one primary read, one artifact, one accent system, one spatial idea, one action.
 - A clear art-direction lane was chosen.
 - A concrete recipe was used when visual direction was open.
 - Product evidence, layout, typography, material, content rhythm, and interaction budget are all accounted for.
@@ -60,6 +61,7 @@ Use this before finishing a Lemonade UI-style frontend task.
 - Letter spacing is not negative.
 - Images/media reveal the real subject when inspection matters.
 - The page has one clear art-direction idea, not a pile of effects.
+- Bold art direction is legible and restrained, not a noisy poster collage.
 - Product artifacts feel dimensional and designed, not like flat placeholder mockups.
 - Generic "AI-powered" claims are replaced with concrete user actions and proof.
 

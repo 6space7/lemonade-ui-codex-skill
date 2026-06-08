@@ -4,6 +4,8 @@ Use this when the user asks for Lemonade vibe, when a design feels merely compet
 
 For open-ended work, use this after `design-contract.md`. The contract should name the single Lemonade DNA move before implementation starts.
 
+When the design uses rotation, glow, big artifacts, poster frames, or collage, also load `composition-discipline.md`.
+
 ## Core Feeling
 
 Lemonade UI should feel like a premium product poster with real software inside it:
@@ -14,6 +16,7 @@ Lemonade UI should feel like a premium product poster with real software inside 
 - Crisp typography with deliberate line breaks.
 - Small UI details that reward looking closer.
 - Motion or glow as atmosphere, not decoration.
+- Restraint: one primary read, one dominant artifact, one accent system, one clear action.
 
 It can be light, dark, colorful, or monochrome, but it should not feel like a safe SaaS template.
 
@@ -23,7 +26,7 @@ Prefer one of these structures over default split hero:
 
 - **Cinematic stage:** centered or offset headline, large product surface below, atmosphere around the edges.
 - **Shaped poster:** one oversized rounded/cutout frame, capsule nav, or carved container carrying the page.
-- **Layered objects:** cards, panels, devices, or records overlap with depth, rotation, shadows, and meaningful labels.
+- **Layered objects:** cards, panels, devices, or records overlap with depth, restrained rotation, shadows, and meaningful labels.
 - **Product theatre:** a software surface is lit like the hero object, with surrounding captions, chips, arrows, or notes.
 - **Editorial sequence:** sections feel like composed scenes, not repeated feature blocks.
 - **Artifact wall:** several product fragments form a controlled collage around a clear narrative.
@@ -39,6 +42,7 @@ When the structure still feels vague, choose one of the recipe files under `refe
 - Add depth with subtle borders, inner shadows, glass, grain, glow, photo/bitmap texture, or layered translucency.
 - Use large radii for hero frames only when the shape is the visual idea.
 - Product cards should feel like real objects: slight rotation, overlap, clipping, parallax depth, or anchored shadows.
+- Keep main artifact rotation subtle, usually 1-2 degrees; text inside important artifacts should remain easy to read.
 - Avoid every panel having the same radius, border, blur, and shadow.
 
 ## Type And Copy
@@ -78,3 +82,4 @@ Reject or revise when the design has:
 - Uniform card grid with no scene, depth, or hero object.
 - Pretty product mockup with no theatrical composition.
 - Copy that is correct but visually unmemorable.
+- Giant poster headline, tilted artifact, loud accent shape, and floating note all competing at once.

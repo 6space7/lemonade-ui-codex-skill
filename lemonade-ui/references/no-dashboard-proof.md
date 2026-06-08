@@ -4,6 +4,8 @@ Use this for landing pages and hero sections when the model keeps creating dashb
 
 The goal is not to hide the product. The goal is to stop using a full fake software screen as the automatic proof object.
 
+No-dashboard proof must still pass `composition-discipline.md`. Do not replace dashboard slop with poster-collage slop.
+
 ## Default Rule
 
 For vague SaaS, CRM, AI, devtool, finance, and product landing prompts, default to:
@@ -37,6 +39,8 @@ Prefer one of these:
 
 These can contain UI, but they should not read as a complete dashboard window.
 
+They should also remain legible, plausible, and restrained. A selected object card is not a license for random tilt, giant labels, fake scores, or neon decoration.
+
 ## CRM Without Dashboard
 
 For a vague CRM hero, avoid a full queue/detail dashboard by default.
@@ -56,6 +60,7 @@ If you need a list, show two or three physical cards or a cropped strip, not a f
 ## Visual Moves
 
 - Make the artifact oversized, cropped, floating, printed, stacked, pinned, glowing, or staged.
+- Keep the main artifact mostly straight and readable; use rotation sparingly.
 - Let the artifact break the frame or sit inside a shaped poster field.
 - Put headline and CTA around the artifact instead of placing a dashboard beside copy.
 - Use microcopy on the object itself instead of a paragraph explaining the product.
@@ -64,6 +69,7 @@ If you need a list, show two or three physical cards or a cropped strip, not a f
 ## Reject
 
 - Browser chrome or desktop app chrome used as the hero proof.
+- Noisy poster collage used as proof: huge broken headline, tilted card, loud backing shape, fake metric badge, and floating note all at once.
 - Multi-pane queue/list/detail/action layouts when the user did not ask for an app screen.
 - A dashboard-like rectangle beside a headline, paragraph, and CTAs.
 - Fake navigation inside the proof object.

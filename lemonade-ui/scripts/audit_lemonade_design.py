@@ -81,6 +81,9 @@ GENERIC_METRIC_PATTERNS = [
     r"\b" + phrase("tasks ", "scheduled") + r"\b",
     r"\b" + phrase("first-", "reply ", "average") + r"\b",
     r"\b" + phrase("time ", "saved") + r"\b",
+    r"\b\d+\s*" + phrase("min ", "saved") + r"\b",
+    r"\b" + phrase("confidence") + r"\s*\d+%?\b",
+    r"\b" + phrase("score") + r"\s*\d+%?\b",
     r"\b" + phrase("faster ", "workflow") + r"\b",
 ]
 
@@ -164,6 +167,12 @@ HOVER_PATTERN = re.compile(r"\bhover:", re.I)
 FOCUS_PATTERN = re.compile(r"\b(?:focus:|focus-visible:|onFocus|onBlur)\b", re.I)
 POINTER_MOTION_PATTERN = re.compile(r"\b(?:onMouseMove|onPointerMove|mousemove|pointermove)\b", re.I)
 REDUCED_MOTION_PATTERN = re.compile(r"\b(?:prefers-reduced-motion|useReducedMotion|reducedMotion|motion-reduce)\b", re.I)
+ROTATE_PATTERN = re.compile(
+    r"\b(?:-?rotate-(?:[3-9]|1[0-9]|[2-9][0-9])|-?rotate-\[[^\]]*(?:3deg|4deg|5deg|6deg|7deg|8deg|9deg|1[0-9]deg)[^\]]*\])",
+    re.I,
+)
+TRACKING_WIDE_PATTERN = re.compile(r"\btracking-(?:wide|wider|widest)\b|letter-spacing\s*:\s*(?:0\.[1-9]|[1-9])", re.I)
+ACCENT_HUE_PATTERN = re.compile(r"\b(?:lime|cyan|orange|amber|yellow|red|blue|purple|pink|emerald|green|violet|fuchsia)\b", re.I)
 
 
 RULES = [
@@ -213,7 +222,7 @@ RULES = [
         "AI006",
         "warn",
         re.compile("|".join(GENERIC_METRIC_PATTERNS), re.I),
-        "Metrics should connect to visible product state, not float as generic proof.",
+        "Metrics, scores, and savings badges should connect to visible product state, not float as generic proof.",
     ),
     Rule(
         "AI007",
@@ -268,6 +277,18 @@ RULES = [
         "warn",
         re.compile(r"rounded-(?:2xl|3xl|full)|rounded-\[[^\]]*(?:2rem|3rem|999)", re.I),
         "Large radii can look AI-ish when overused; make sure the shape has a reason.",
+    ),
+    Rule(
+        "LAY004",
+        "warn",
+        ROTATE_PATTERN,
+        "Large rotation on product artifacts often creates poster-collage slop; keep main artifacts readable and restrained.",
+    ),
+    Rule(
+        "TYP002",
+        "warn",
+        TRACKING_WIDE_PATTERN,
+        "Wide tracking can turn labels into fake poster decoration; verify labels stay readable and purposeful.",
     ),
     Rule(
         "SPC001",
@@ -332,6 +353,8 @@ def file_level_findings(path: Path, text: str) -> list[tuple[str, str, Path, int
     has_focus = bool(FOCUS_PATTERN.search(text))
     has_pointer_motion = bool(POINTER_MOTION_PATTERN.search(text))
     has_reduced_motion = bool(REDUCED_MOTION_PATTERN.search(text))
+    has_rotation = bool(ROTATE_PATTERN.search(text))
+    accent_hues = {match.group(0).lower() for match in ACCENT_HUE_PATTERN.finditer(text)}
 
     if has_hero and has_h1 and has_paragraph and has_two_ctas and has_default_artifact:
         offset = re.search(r"<h1\b", text, re.I)
@@ -366,6 +389,29 @@ def file_level_findings(path: Path, text: str) -> list[tuple[str, str, Path, int
                 path,
                 line_number(text, offset.start()) if offset else 1,
                 "Large hero type appears to outrank product proof; verify artifact visibility, especially on mobile.",
+            )
+        )
+
+    if has_hero and has_large_type and has_rotation:
+        offset = ROTATE_PATTERN.search(text)
+        findings.append(
+            (
+                "warn",
+                "AI013",
+                path,
+                line_number(text, offset.start()) if offset else 1,
+                "Huge hero type plus rotated artifact can become noisy poster art; verify one primary read and legible proof.",
+            )
+        )
+
+    if has_hero and len(accent_hues) >= 4:
+        findings.append(
+            (
+                "warn",
+                "PAL001",
+                path,
+                1,
+                "Many accent hues detected in one hero file; keep to one main accent and one support accent unless brand requires more.",
             )
         )
 

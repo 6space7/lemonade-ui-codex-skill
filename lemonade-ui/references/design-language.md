@@ -8,6 +8,7 @@ Use this as the short taste index. For detailed work, load the focused reference
 - Specific product evidence before decoration.
 - Product artifact before software-preview wallpaper.
 - No-dashboard proof before app-window proof for vague landing heroes.
+- Composition discipline before poster/collage/glow effects.
 - Composition recipe before safe default layout.
 - Spacing rhythm before decorative polish.
 - Default SaaS hero escape before polish.
@@ -42,6 +43,7 @@ If a later layer is doing the work of an earlier layer, go back. Animation canno
 - SaaS hero feels default: `saas-hero-escape-system.md`.
 - Need product artifact: `product-artifact-selection.md`.
 - Keeps making dashboards: `no-dashboard-proof.md`.
+- Gets loud, tilted, cramped, or fake: `composition-discipline.md`.
 - Need concrete layout shape: choose one file under `recipes/`.
 - Too much text: `copy-compression.md`.
 - Weak layout/type: `visual-hierarchy.md`.

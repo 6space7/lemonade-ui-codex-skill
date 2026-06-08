@@ -14,6 +14,7 @@ Moment: ...
 Artifact: ...
 Dashboard/app screen: ...
 Composition: ...
+Composition discipline: ...
 DNA move: ...
 Mobile proof: ...
 Spacing: ...
@@ -28,6 +29,7 @@ Avoiding: ...
 - **Artifact:** the visible proof object. Prefer selected records, editors, files, media, rows, messages, outputs, timelines, tables, objects, or real screenshots.
 - **Dashboard/app screen:** default to "no" for vague landing heroes. Say "yes" only when the user asked for a dashboard/admin/app screen or the product is truly dashboard-first.
 - **Composition:** choose one layout lane or recipe. Do not default to a generic split hero.
+- **Composition discipline:** name the primary read, dominant artifact, accent system, spatial idea, and one action.
 - **DNA move:** one memorable stage, frame, crop, object, material, glow, dimensional layer, or spatial gesture.
 - **Mobile proof:** what the first mobile viewport shows before the user scrolls far.
 - **Spacing:** page shell, section padding, container max width, grid gap, component padding, and control height.
@@ -72,6 +74,7 @@ Reject contracts like:
 - Artifact: "dashboard mockup"
 - Dashboard/app screen: "yes because SaaS"
 - Composition: "modern split hero"
+- Composition discipline: "make it bold"
 - DNA move: "gradient background"
 - Mobile proof: "mockup below text"
 - Spacing: "looks good"
@@ -91,6 +94,7 @@ Moment: Turn a stale renewal note into an approved follow-up.
 Artifact: Selected account record, call note, draft reply, and approval action.
 Dashboard/app screen: No; use standalone record, note, and output artifacts rather than a full CRM workbench.
 Composition: Dark product theatre with the selected record cropped large.
+Composition discipline: Primary read is the deal state; one straight artifact; lime only for selected/ready; approve is the single action.
 DNA move: Lit artifact stage with two floating proof chips and a side annotation.
 Mobile proof: Selected account card and approval button appear before secondary copy.
 Spacing: 24px mobile shell, 1200px desktop container, 32px hero gutter, 16/24px panel rhythm, 48px CTA row.
@@ -105,6 +109,7 @@ After the browser screenshot:
 
 - If the artifact does not dominate, enlarge, crop, or move it earlier.
 - If a vague hero became a dashboard/app screen, replace it with a selected object, output, transcript, card stack, before/after, or action artifact.
+- If no-dashboard proof became noisy poster art, load `composition-discipline.md` and reduce to one read, one artifact, one accent, one action.
 - If mobile proof is late, rewrite mobile order instead of shrinking desktop.
 - If spacing feels accidental, define the rhythm and remove random gaps.
 - If the DNA move is invisible, strengthen the stage, frame, crop, material, or object.

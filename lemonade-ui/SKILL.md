@@ -19,6 +19,7 @@ The contract must choose:
 - **Dominant artifact:** the screenshot, selected record, editor, table/detail view, object, media, output, or workflow fragment that proves the product.
 - **Dashboard/app screen:** whether a full software screen is allowed; default to "no" for vague landing heroes.
 - **Composition lane:** the layout structure that carries the page.
+- **Composition discipline:** the primary read, dominant artifact, accent system, spatial idea, and one action.
 - **Lemonade DNA move:** one stage, frame, crop, object, material, glow, depth, or spatial gesture.
 - **Mobile first proof:** what product proof appears in the first mobile viewport.
 - **Spacing rhythm:** page shell, section padding, container width, gaps, component padding, and control sizes.
@@ -34,6 +35,7 @@ Moment: ...
 Artifact: ...
 Dashboard/app screen: ...
 Composition: ...
+Composition discipline: ...
 DNA move: ...
 Mobile proof: ...
 Spacing: ...
@@ -67,6 +69,7 @@ Load only the files needed for the current problem:
 - `references/design-spine.md`: start here for new pages, broad redesigns, or unclear visual direction.
 - `references/lemonade-visual-dna.md`: use when the page needs Lemonade vibe, stronger art direction, memorable composition, or positive taste guidance.
 - `references/visual-reference-calibration.md`: use when the user provides screenshots, moodboards, or wants a stronger Lemonade visual vibe.
+- `references/composition-discipline.md`: use when bold art direction risks becoming noisy, over-rotated, fake, cramped, or poster-collage slop.
 - `references/spacing-and-rhythm.md`: use before coding layout and when spacing, sizing, gaps, or responsive rhythm feel wrong.
 - `references/interaction-quality.md`: use before adding animation, hover states, tactile controls, or interactive polish.
 - `references/saas-hero-escape-system.md`: use before SaaS/product/startup landing heroes to avoid the generic AI SaaS hero stack.
@@ -126,6 +129,7 @@ If files exist locally, run `scripts/audit_lemonade_design.py <path>` before fin
    - Pick one recipe when the visual direction is open or the design starts drifting into a generic template.
    - Recipes are execution rails, not templates. Adapt the product artifact and content to the user's project.
    - Do not mix more than two recipes in one first viewport.
+   - Load `composition-discipline.md` when using poster, collage, dark theatre, shaped frame, rotation, glow, large artifacts, or bold accent color.
 
 8. Calibrate by failure mode.
    - Pick a calibration reference by the design problem, not by product category.
@@ -179,6 +183,7 @@ Do not ship while any are true:
 - The hero is text over a blob, orb, mesh gradient, or vague abstract background.
 - The main product artifact is a fake dashboard with generic Analytics/Growth/Automation/Insights cards.
 - A vague SaaS/CRM/product hero uses a full dashboard, app window, or multi-pane workbench without the user asking for one.
+- No-dashboard proof turns into a loud poster collage with awkward huge type, random rotation, competing accents, or fake metric badges.
 - The page defaults to a generic split hero with a framed software preview, loose stats, placeholder branding, and no stronger composition idea.
 - Mobile first viewport is mostly brand, badge, oversized headline, paragraph, and stacked CTAs before product proof.
 - The guidance or output is quietly copying one sample product category instead of solving the current user's product.

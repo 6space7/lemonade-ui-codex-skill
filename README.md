@@ -9,6 +9,7 @@ Lemonade UI is for frontend work that should feel alive without becoming noisy: 
 - Create a mandatory design contract before open-ended frontend coding.
 - Force spacing rhythm and interaction briefs instead of eyeballed gaps and decorative motion.
 - Default vague SaaS/CRM heroes away from dashboard/app-window mockups.
+- Prevent no-dashboard overcorrection into noisy poster-collage concepts.
 - Design from a real product moment instead of a generic template.
 - Apply Lemonade visual DNA: cinematic contrast, shaped frames, layered product objects, and a memorable visual idea.
 - Use concrete composition recipes instead of vague "modern premium" adjectives.
@@ -50,6 +51,7 @@ Moment: ...
 Artifact: ...
 Dashboard/app screen: ...
 Composition: ...
+Composition discipline: ...
 DNA move: ...
 Mobile proof: ...
 Spacing: ...
@@ -85,6 +87,7 @@ lemonade-ui/
   references/calibration-overcopy-and-scale.md
   references/calibration-product-proof.md
   references/calibration-responsive-composition.md
+  references/composition-discipline.md
   references/copy-compression.md
   references/design-spine.md
   references/design-language.md
@@ -115,6 +118,7 @@ The main `SKILL.md` is a fast router with a hard design-contract gate. Detailed 
 - `calibration-overcopy-and-scale.md` fixes huge type, yapping, and weak copy rhythm.
 - `calibration-product-proof.md` moves vague claims into credible visible product evidence.
 - `calibration-responsive-composition.md` prevents desktop-to-mobile stacking mistakes.
+- `composition-discipline.md` keeps bold no-dashboard art direction legible, restrained, and product-plausible.
 - `calibration-operational-ui.md` keeps dashboards and tools dense, useful, and calm.
 - `copy-compression.md` keeps pages from over-yapping.
 - `design-contract.md` forces product moment, artifact, composition, DNA move, mobile proof, spacing, copy budget, interaction, and avoided default before coding.

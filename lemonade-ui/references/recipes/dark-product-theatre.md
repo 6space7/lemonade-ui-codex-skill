@@ -2,6 +2,8 @@
 
 Use when the page should feel cinematic, premium, technical, focused, or distinctly Lemonade.
 
+Load `../composition-discipline.md` when the stage uses large type, bright accent color, rotated objects, or floating fragments.
+
 ## Structure
 
 - Use a black or near-black stage as the main visual field.
@@ -42,6 +44,8 @@ Use when the page should feel cinematic, premium, technical, focused, or distinc
 ## Avoid
 
 - A dark background with generic cards floating randomly.
+- A giant headline competing with a giant rotated artifact.
+- Neon accent color on unrelated objects.
 - Glow as the whole idea.
 - Tiny whole-product previews.
 - Huge headline followed by the artifact only after scrolling.

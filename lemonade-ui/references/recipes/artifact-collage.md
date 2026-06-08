@@ -2,12 +2,15 @@
 
 Use when the product is best proven through several fragments: records, cards, files, messages, clips, screenshots, logs, invoices, orders, notes, or outputs.
 
+Before coding, load `../composition-discipline.md`. Collage is a controlled proof system, not a pile of rotated cards.
+
 ## Structure
 
 - Pick one dominant artifact.
 - Add two to four supporting fragments with different scale, density, or depth.
 - Arrange fragments around a clear story, not as random cards.
-- Use overlap, crop, rotation, or z-depth to create a composed scene.
+- Use overlap, crop, restrained rotation, or z-depth to create a composed scene.
+- Keep the main artifact readable and mostly straight.
 
 ## Layout Moves
 
@@ -41,5 +44,8 @@ Use when the product is best proven through several fragments: records, cards, f
 
 - Equal-size card soup.
 - Decorative cards with generic labels.
+- Over-rotated poster cards.
+- Loud backing shapes that compete with the artifact.
+- Fake metric badges used as visual decoration.
 - Too many fragments competing for first read.
 - Collage that hides the actual product job.
