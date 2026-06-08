@@ -7,6 +7,7 @@ Lemonade UI is for frontend work that should feel alive without becoming noisy: 
 ## What It Helps Codex Do
 
 - Create a mandatory design contract before open-ended frontend coding.
+- Force spacing rhythm and interaction briefs instead of eyeballed gaps and decorative motion.
 - Design from a real product moment instead of a generic template.
 - Apply Lemonade visual DNA: cinematic contrast, shaped frames, layered product objects, and a memorable visual idea.
 - Use concrete composition recipes instead of vague "modern premium" adjectives.
@@ -49,7 +50,9 @@ Artifact: ...
 Composition: ...
 DNA move: ...
 Mobile proof: ...
+Spacing: ...
 Copy budget: ...
+Interaction: ...
 Avoiding: ...
 ```
 
@@ -83,6 +86,7 @@ lemonade-ui/
   references/copy-compression.md
   references/design-spine.md
   references/design-language.md
+  references/interaction-quality.md
   references/lemonade-visual-dna.md
   references/motion-recipes.md
   references/product-artifact-selection.md
@@ -90,6 +94,7 @@ lemonade-ui/
   references/responsive-composition.md
   references/review-checklist.md
   references/saas-hero-escape-system.md
+  references/spacing-and-rhythm.md
   references/visual-reference-calibration.md
   references/visual-hierarchy.md
   references/recipes/artifact-collage.md
@@ -109,9 +114,10 @@ The main `SKILL.md` is a fast router with a hard design-contract gate. Detailed 
 - `calibration-responsive-composition.md` prevents desktop-to-mobile stacking mistakes.
 - `calibration-operational-ui.md` keeps dashboards and tools dense, useful, and calm.
 - `copy-compression.md` keeps pages from over-yapping.
-- `design-contract.md` forces product moment, artifact, composition, DNA move, mobile proof, copy budget, and avoided default before coding.
+- `design-contract.md` forces product moment, artifact, composition, DNA move, mobile proof, spacing, copy budget, interaction, and avoided default before coding.
 - `design-language.md` covers taste, layout, page archetypes, palette, and mistakes to avoid.
 - `design-spine.md` forces the core design decisions before motion.
+- `interaction-quality.md` forces a motion brief and stateful interaction rules before adding animation.
 - `lemonade-visual-dna.md` captures the positive Lemonade look: cinematic stages, shaped frames, layered objects, strong material, and deliberate type.
 - `motion-recipes.md` covers GSAP/CSS/React interaction patterns and reduced-motion safety.
 - `product-artifact-selection.md` chooses the right visible artifact before product proof is designed.
@@ -119,6 +125,7 @@ The main `SKILL.md` is a fast router with a hard design-contract gate. Detailed 
 - `responsive-composition.md` handles mobile/desktop composition strategy.
 - `review-checklist.md` is the final quality gate before shipping frontend work.
 - `saas-hero-escape-system.md` breaks the generic SaaS hero pattern.
+- `spacing-and-rhythm.md` defines page rhythm, section padding, container widths, component gaps, control sizes, and spacing review.
 - `visual-reference-calibration.md` turns screenshots and moodboards into reusable visual decisions without copying a single product.
 - `visual-hierarchy.md` covers type, spacing, material, and first-read clarity.
 - `references/recipes/` contains executable composition recipes: dark product theatre, shaped poster frame, artifact collage, editorial product story, and operational work surface.

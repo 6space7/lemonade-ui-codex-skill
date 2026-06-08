@@ -20,7 +20,9 @@ The contract must choose:
 - **Composition lane:** the layout structure that carries the page.
 - **Lemonade DNA move:** one stage, frame, crop, object, material, glow, depth, or spatial gesture.
 - **Mobile first proof:** what product proof appears in the first mobile viewport.
+- **Spacing rhythm:** page shell, section padding, container width, gaps, component padding, and control sizes.
 - **Copy budget:** headline line count, paragraph length, CTA count, and where microcopy moves into the product artifact.
+- **Interaction role:** the useful state change, feedback, reveal, manipulation, or continuity the motion provides.
 - **Default avoided:** the generic pattern being rejected before coding.
 
 Use this shape in working notes before implementation:
@@ -32,7 +34,9 @@ Artifact: ...
 Composition: ...
 DNA move: ...
 Mobile proof: ...
+Spacing: ...
 Copy budget: ...
+Interaction: ...
 Avoiding: ...
 ```
 
@@ -45,10 +49,11 @@ For open-ended visual work, always move in this order:
 1. Design contract.
 2. Artifact selection.
 3. Composition recipe.
-4. Static layout.
-5. Responsive rewrite.
-6. Motion.
-7. Browser screenshot review.
+4. Spacing rhythm.
+5. Static layout.
+6. Responsive rewrite.
+7. Motion brief.
+8. Browser screenshot review.
 
 If a later layer is compensating for an earlier one, go back. Animation cannot fix a weak artifact. A grid cannot fix vague copy. A glow cannot fix a generic composition.
 
@@ -60,6 +65,8 @@ Load only the files needed for the current problem:
 - `references/design-spine.md`: start here for new pages, broad redesigns, or unclear visual direction.
 - `references/lemonade-visual-dna.md`: use when the page needs Lemonade vibe, stronger art direction, memorable composition, or positive taste guidance.
 - `references/visual-reference-calibration.md`: use when the user provides screenshots, moodboards, or wants a stronger Lemonade visual vibe.
+- `references/spacing-and-rhythm.md`: use before coding layout and when spacing, sizing, gaps, or responsive rhythm feel wrong.
+- `references/interaction-quality.md`: use before adding animation, hover states, tactile controls, or interactive polish.
 - `references/saas-hero-escape-system.md`: use before SaaS/product/startup landing heroes to avoid the generic AI SaaS hero stack.
 - `references/product-artifact-selection.md`: use before product proof to choose the right artifact, workflow fragment, or operational surface.
 - `references/recipes/dark-product-theatre.md`: use for cinematic dark stages with one lit product artifact.
@@ -130,23 +137,30 @@ If files exist locally, run `scripts/audit_lemonade_design.py <path>` before fin
    - Use type, spacing, alignment, contrast, and material before motion.
    - Keep hero-scale type out of compact cards, dashboards, and controls.
 
-11. Prove the product.
+11. Set spacing rhythm.
+   - Load `spacing-and-rhythm.md` when building or reviewing layout.
+   - Define section padding, container max width, gaps, component padding, and control sizes.
+   - Fix spacing and alignment before adding motion, shadow, blur, or glow.
+
+12. Prove the product.
    - Use credible UI, real screenshots/media, generated bitmap scenes, product artifacts, workflow states, or proof.
    - If hiding the logo makes the page feel like any random SaaS, redesign the visual anchor.
 
-12. Design responsive composition.
+13. Design responsive composition.
    - Mobile is a rewritten story, not desktop stacked vertically.
    - Desktop should use space intentionally, not just bigger cards.
    - Fix clipping, overlap, horizontal scroll, tap targets, and text fit while building.
 
-13. Spend motion carefully.
+14. Spend motion carefully.
+   - Load `interaction-quality.md` and write a motion brief for non-trivial animation.
    - Add at most one signature interaction per section.
    - Motion must reveal, confirm, select, complete, navigate, or clarify state.
    - Respect reduced motion and keep the static layout beautiful.
 
-14. Prove it in browser.
+15. Prove it in browser.
    - Check desktop and mobile.
    - Compare screenshots against the design contract before final delivery.
+   - Check hover, focus, active, selected, loading, and reduced-motion states when interaction exists.
    - Run relevant checks and the Lemonade audit script.
    - Do not call frontend design complete from code inspection alone when a preview can run.
 
@@ -157,6 +171,7 @@ Do not ship while any are true:
 - The design only becomes interesting when animated.
 - Frontend work began without a design contract for an open-ended visual task.
 - The page is mostly huge text and explanatory paragraphs.
+- Spacing is eyeballed with random gaps, equal padding everywhere, or no clear rhythm.
 - The hero is text over a blob, orb, mesh gradient, or vague abstract background.
 - The main product artifact is a fake dashboard with generic Analytics/Growth/Automation/Insights cards.
 - The page defaults to a generic split hero with a framed software preview, loose stats, placeholder branding, and no stronger composition idea.
@@ -166,6 +181,7 @@ Do not ship while any are true:
 - Mobile is just a cramped stacked desktop layout.
 - Type hierarchy, content rhythm, or art direction is unclear.
 - Hover states move surrounding layout.
+- Animation was added without a clear motion role, bounds, reset, and reduced-motion behavior.
 - Motion exists without reduced-motion behavior.
 - Icon-only controls lack accessible names.
 - The page looks acceptable in only one viewport.

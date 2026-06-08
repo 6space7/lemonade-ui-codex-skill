@@ -8,6 +8,7 @@ Use this as the short taste index. For detailed work, load the focused reference
 - Specific product evidence before decoration.
 - Product artifact before software-preview wallpaper.
 - Composition recipe before safe default layout.
+- Spacing rhythm before decorative polish.
 - Default SaaS hero escape before polish.
 - Lemonade visual DNA before safe template composition.
 - Strong static composition before animation.
@@ -24,7 +25,7 @@ Use this as the short taste index. For detailed work, load the focused reference
 4. Copy, typography, and content.
 5. Palette and material.
 6. Component states and controls.
-7. Interaction and motion.
+7. Motion brief and interaction.
 8. Browser screenshot QA.
 
 If a later layer is doing the work of an earlier layer, go back. Animation cannot fix weak product evidence. Color cannot fix vague copy. Shadows cannot fix bad hierarchy.
@@ -35,6 +36,8 @@ If a later layer is doing the work of an earlier layer, go back. Animation canno
 - Need direction: `design-spine.md`.
 - Needs Lemonade vibe: `lemonade-visual-dna.md`.
 - Have screenshots or moodboard: `visual-reference-calibration.md`.
+- Spacing feels off: `spacing-and-rhythm.md`.
+- Interaction feels weak or buggy: `interaction-quality.md`.
 - SaaS hero feels default: `saas-hero-escape-system.md`.
 - Need product artifact: `product-artifact-selection.md`.
 - Need concrete layout shape: choose one file under `recipes/`.

@@ -15,7 +15,9 @@ Artifact: ...
 Composition: ...
 DNA move: ...
 Mobile proof: ...
+Spacing: ...
 Copy budget: ...
+Interaction: ...
 Avoiding: ...
 ```
 
@@ -26,7 +28,9 @@ Avoiding: ...
 - **Composition:** choose one layout lane or recipe. Do not default to a generic split hero.
 - **DNA move:** one memorable stage, frame, crop, object, material, glow, dimensional layer, or spatial gesture.
 - **Mobile proof:** what the first mobile viewport shows before the user scrolls far.
+- **Spacing:** page shell, section padding, container max width, grid gap, component padding, and control height.
 - **Copy budget:** set limits before writing copy.
+- **Interaction:** one useful motion or state behavior, or "none until static layout is stronger."
 - **Avoiding:** name the lazy pattern being rejected.
 
 ## Copy Budget Defaults
@@ -67,7 +71,9 @@ Reject contracts like:
 - Composition: "modern split hero"
 - DNA move: "gradient background"
 - Mobile proof: "mockup below text"
+- Spacing: "looks good"
 - Copy budget: "normal SaaS copy"
+- Interaction: "smooth animations"
 - Avoiding: "none"
 
 They are not specific enough to protect the design.
@@ -83,7 +89,9 @@ Artifact: Selected account record, call note, draft reply, and approval action.
 Composition: Dark product theatre with the selected record cropped large.
 DNA move: Lit work surface with two floating proof chips and a side annotation.
 Mobile proof: Selected account card and approval button appear before secondary copy.
+Spacing: 24px mobile shell, 1200px desktop container, 32px hero gutter, 16/24px panel rhythm, 48px CTA row.
 Copy budget: 3-line headline, 18-word paragraph, one primary CTA, no loose stats.
+Interaction: Selecting a queued account updates the detail pane; 220ms state change, no layout shift.
 Avoiding: generic split hero, framed dashboard wallpaper, floating metrics row.
 ```
 
@@ -93,5 +101,7 @@ After the browser screenshot:
 
 - If the artifact does not dominate, enlarge, crop, or move it earlier.
 - If mobile proof is late, rewrite mobile order instead of shrinking desktop.
+- If spacing feels accidental, define the rhythm and remove random gaps.
 - If the DNA move is invisible, strengthen the stage, frame, crop, material, or object.
+- If motion feels decorative, rewrite the interaction role or remove the animation.
 - If the avoided default is still visible, redesign the structure before adding polish.

@@ -132,6 +132,11 @@ TWO_COLUMN_PATTERN = re.compile(r"\b(?:grid-cols-2|md:grid-cols-2|lg:grid-cols-2
 ARTIFACT_PATTERN = re.compile("|".join(DEFAULT_HERO_ARTIFACT_PATTERNS), re.I)
 PROOF_PATTERN = re.compile("|".join(PRODUCT_PROOF_PATTERNS), re.I)
 CTA_PATTERN = re.compile("|".join(CTA_LABEL_PATTERNS), re.I)
+FULL_SCREEN_PATTERN = re.compile(r"\b(?:min-h-screen|h-screen)\b|height\s*:\s*100(?:vh|svh|dvh)", re.I)
+HOVER_PATTERN = re.compile(r"\bhover:", re.I)
+FOCUS_PATTERN = re.compile(r"\b(?:focus:|focus-visible:|onFocus|onBlur)\b", re.I)
+POINTER_MOTION_PATTERN = re.compile(r"\b(?:onMouseMove|onPointerMove|mousemove|pointermove)\b", re.I)
+REDUCED_MOTION_PATTERN = re.compile(r"\b(?:prefers-reduced-motion|useReducedMotion|reducedMotion|motion-reduce)\b", re.I)
 
 
 RULES = [
@@ -238,6 +243,36 @@ RULES = [
         "Large radii can look AI-ish when overused; make sure the shape has a reason.",
     ),
     Rule(
+        "SPC001",
+        "warn",
+        re.compile(r"\b(?:p|px|py|gap|space-x|space-y)-(?:20|24|28|32)\b", re.I),
+        "Very large spacing utilities need a clear rhythm; verify they are not creating dead zones.",
+    ),
+    Rule(
+        "SPC002",
+        "warn",
+        re.compile(r"\b(?:p|px|py|gap|space-x|space-y)-\[[^\]]*(?:80px|96px|112px|128px|8rem|9rem|10rem)[^\]]*\]", re.I),
+        "Large custom spacing detected; verify section rhythm, mobile height, and proof visibility.",
+    ),
+    Rule(
+        "MOT002",
+        "warn",
+        re.compile(r"\btransition-all\b|transition\s*:\s*all\b", re.I),
+        "transition-all often animates unintended properties; prefer explicit transform, opacity, color, or shadow.",
+    ),
+    Rule(
+        "MOT003",
+        "warn",
+        re.compile(r"\banimate-(?:pulse|bounce)\b|animation\s*:[^;]*(?:pulse|bounce)", re.I),
+        "Pulse/bounce loops often feel decorative; verify the animation communicates real state.",
+    ),
+    Rule(
+        "MOT004",
+        "warn",
+        re.compile(r"\bhover:(?:-?translate|scale|rotate)|whileHover\s*=\s*\{[^}]*\b(?:scale|x|y|rotate)", re.I | re.S),
+        "Hover transform needs stable bounds, no layout shift, and a focus/touch equivalent.",
+    ),
+    Rule(
         "MOT001",
         "error",
         re.compile(r"\b(?:gsap|framer-motion|motion\.)\b", re.I),
@@ -263,6 +298,11 @@ def file_level_findings(path: Path, text: str) -> list[tuple[str, str, Path, int
     has_two_column = bool(TWO_COLUMN_PATTERN.search(text))
     has_large_type = bool(LARGE_TYPE_PATTERN.search(text))
     has_specific_proof = bool(PROOF_PATTERN.search(text))
+    has_full_screen = bool(FULL_SCREEN_PATTERN.search(text))
+    has_hover = bool(HOVER_PATTERN.search(text))
+    has_focus = bool(FOCUS_PATTERN.search(text))
+    has_pointer_motion = bool(POINTER_MOTION_PATTERN.search(text))
+    has_reduced_motion = bool(REDUCED_MOTION_PATTERN.search(text))
 
     if has_hero and has_h1 and has_paragraph and has_two_ctas and has_default_artifact:
         offset = re.search(r"<h1\b", text, re.I)
@@ -297,6 +337,42 @@ def file_level_findings(path: Path, text: str) -> list[tuple[str, str, Path, int
                 path,
                 line_number(text, offset.start()) if offset else 1,
                 "Large hero type appears to outrank product proof; verify artifact visibility, especially on mobile.",
+            )
+        )
+
+    if has_hero and has_full_screen and has_large_type and not has_specific_proof:
+        offset = FULL_SCREEN_PATTERN.search(text)
+        findings.append(
+            (
+                "warn",
+                "SPC003",
+                path,
+                line_number(text, offset.start()) if offset else 1,
+                "Full-screen hero plus large type can delay proof; verify first viewport composition and next-section hint.",
+            )
+        )
+
+    if has_hover and not has_focus:
+        offset = HOVER_PATTERN.search(text)
+        findings.append(
+            (
+                "warn",
+                "INT001",
+                path,
+                line_number(text, offset.start()) if offset else 1,
+                "Hover states should usually have focus-visible or keyboard-accessible equivalents.",
+            )
+        )
+
+    if has_pointer_motion and not has_reduced_motion:
+        offset = POINTER_MOTION_PATTERN.search(text)
+        findings.append(
+            (
+                "warn",
+                "INT002",
+                path,
+                line_number(text, offset.start()) if offset else 1,
+                "Pointer-following motion needs a reduced-motion path and reset behavior.",
             )
         )
 

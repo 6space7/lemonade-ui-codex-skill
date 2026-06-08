@@ -25,9 +25,11 @@ Use this before finishing a Lemonade UI-style frontend task.
 - The design has a memorable visual idea beyond hover or scroll effects.
 - The page has Lemonade DNA: strong stage/frame/crop/object/material/spatial idea, not just competent layout.
 
-## Layout
+## Layout And Spacing
 
 - Desktop and mobile have intentional composition.
+- Spacing follows a visible rhythm, not random gaps or equal padding everywhere.
+- Page shell, section padding, group gaps, component padding, and control sizes are coherent.
 - Mobile reveals product proof early, not only after headline, paragraph, and stacked CTAs.
 - Text does not overlap, clip, or escape controls.
 - Fixed-format UI elements have stable dimensions.
@@ -39,6 +41,7 @@ Use this before finishing a Lemonade UI-style frontend task.
 
 ## Interaction
 
+- Non-trivial animation has a motion brief: role, trigger, target, state change, bounds, duration/ease, reset, reduced motion.
 - The signature motion supports feedback, hierarchy, or continuity.
 - Interaction is not carrying the whole design.
 - Hover, focus, active, disabled, and loading states are accounted for where relevant.

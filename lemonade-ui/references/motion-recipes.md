@@ -2,9 +2,12 @@
 
 Use this reference when adding Lemonade UI-style interaction, especially in React components.
 
+Start with `interaction-quality.md`. For non-trivial animation, write the motion brief before choosing one of these recipes.
+
 ## Principles
 
 - Animate feedback, not decoration.
+- Every animation needs a role, trigger, target, bounds, reset, and reduced-motion behavior.
 - Keep the main text stable while surrounding surfaces move.
 - Prefer one signature motion per section.
 - Make hover and focus states equivalent where possible.

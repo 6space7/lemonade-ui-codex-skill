@@ -2,6 +2,8 @@
 
 Use this for layout, typography, spacing, material, first-viewport composition, and "why does this look worse even though it has nice pieces?"
 
+For detailed spacing decisions, load `spacing-and-rhythm.md`.
+
 ## Static-First
 
 The static screenshot must look good before hover, scroll, or animation. If motion is the only interesting part, the design is weak.
@@ -33,6 +35,7 @@ Product proof beats hero text. If a headline, paragraph, CTA pair, or stats row 
 ## Spacing Rules
 
 - Use whitespace to group and rank content.
+- Define a spacing rhythm before adding polish: page shell, section padding, container width, group gaps, component padding, and control sizes.
 - Use density only when the product category needs it, such as dashboards or admin tools.
 - Do not put large cards beside large cards unless the contrast in purpose is obvious.
 - Avoid equal padding everywhere; important surfaces need different rhythm.
